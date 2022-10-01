@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
+
+        <link rel="stylesheet" href="style.css">
+        
+        <title> Codificador ONE </title>
+    </head>
+
+    <body>
+        <main>
+            <section class="mensagem-enviar">
+                <header>
+                    <img src="./Imagens/Logo.png" alt="Logo Alura">
+                </header>            
+
+                <div class="input-conteiner">
+                    <textarea id="textUser" class="input-texto" cols="40" rows="10" placeholder="Digite seu texto..." required spellcheck="false"></textarea>
+
+                    <div class="informacao">
+                        <img src="./Imagens/Atencao.png" alt="Atenção"> Apenas letras minúsculas e sem acento.
+                    </div>
+
+                    <div class="botoes">
+                        <button class="encriptar" onclick="encriptar()"> 
+                            Criptografar 
+                        </button>
+
+                        <button class="desencriptar" onclick="desencriptador()"> 
+                            Descriptografar 
+                        </button>
+                    </div>
+                </div>
+            </section>
+
+            <section class="result-texto">
+                <!-- <textarea class="mensagem" cols="18" rows="8"></textarea> -->
+                <div class="result-conteiner">
+                    <div id='boneco' class="mensagem" >
+                        <img src="./Imagens/Boneco.png" alt="Boneco">
+                    </div>
+
+                    <div class="result-conteudo">
+                        <div id="sumir">
+                            <Strong> Nenhuma mensagem encontrada </Strong>
+                            <p> Digite um texto que você deseja criptografar ou descriptografar. </p>
+                        </div>
+
+                        <textarea id="encriptado" readonly spellcheck="false"></textarea>
+
+                        <button class="copiar" onclick="copiar()"> 
+                            Copiar 
+                        </button>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <script src="script.js"></script>
+    </body>
+</html>

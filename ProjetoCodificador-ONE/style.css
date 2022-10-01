@@ -1,0 +1,204 @@
+/* Geral para toda a página */
+* {
+    font-family: 'Inter', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-weight: 400px;
+    font-size: 32px;
+    line-height: 150%;
+}
+
+body {
+    background: #cda2f9;
+}
+
+/* Logo */
+header {
+    margin-top: 0.8rem;
+}
+
+main {
+    display: flex;
+    height: 100vh;
+    margin-left: 80px;
+    /* margin-bottom: 50px; */
+}
+
+/* Área para enviar o texto */
+.input-conteiner {
+    margin-left: 3rem;
+    width: 22rem;
+
+    display: flex;
+    flex-direction: column;
+}
+
+.input-texto {
+    /* width: 766px;
+    height: 493px; */
+
+    margin-top: 10px;
+    margin-right: 30px;
+    border-radius: 10px;
+    border: none;
+    background: #cda2f9;
+
+    font-size: 0.8rem;
+
+    resize: none;
+}
+
+.input-texto:focus {
+    outline: none;
+}
+
+.input-texto::placeholder {
+    color: #723b82;
+}
+
+/* Atenção */
+.informacao {
+    font-size: 15px;
+}
+
+/* Botões (área enviar texto) */
+.botoes button {
+    height: 2rem;
+    width: 250px;
+    background: #0A3871;
+    cursor: pointer;
+}
+
+.botoes {
+    display: flex;
+    gap: 30px; /* espaço entre itens -> precisa do flex */
+    margin-top: 1rem;
+}
+
+main .mensagem-enviar .botoes .encriptar {
+    font-size: 0.6rem;
+    /* margin-top: 15px;
+    margin-right: 30px; */
+    background: #9a57bc;
+    color: black;
+    border-radius: 30px;
+    border-color: #6b3764;
+} 
+
+main .mensagem-enviar .botoes .desencriptar {
+    font-size: 0.6rem;
+    /* margin-top: 15px;
+    margin-left: 30px; */
+    background: #dec2ff;
+    color: black;
+    border-radius: 30px;
+    border-color: #6b3764;
+}
+
+/* Área do resultado do texto */
+main .result-conteiner {
+    background-color: #F6f6f6;
+    width: 12rem;
+    height: 100vh;
+    margin-block: 20px;
+   
+    border-radius: 32px;
+    border: 1px solid #FFFFFF;
+
+    justify-content: center;
+}
+
+main .result-conteudo strong{
+    font-size: 0.6rem;
+}
+
+main .result-conteudo p {
+    margin-top: 0.6rem;
+    font-size: 0.5rem;
+}
+
+main .result-conteudo {
+    text-align: center;
+    /* justify-content: center; */
+    display: flex;
+    flex-direction: column;
+    /* align-items: center; */
+    margin-top: 0.5rem;
+}
+
+main .result-texto .mensagem img {
+    width: 10rem;
+    padding: 1rem;
+}
+
+main .result-texto {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+    width: 100%;
+}
+
+main .result-texto .mensagem {
+    justify-content: center;
+    text-align: center;
+    
+    /* position: fixed; */
+    /* height: 100vw;
+    width: 356px; */
+    /* flex-direction: column; */
+
+    /* margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 32px;
+    border: 1px solid #FFFFFF; */
+    
+    /* background-image: url("./Imagens/Boneco.png");
+    background-repeat: no-repeat;
+    background-position: 18px;
+    background-size: 300px;
+
+    resize: none; */
+}
+
+/* Botão (Área resultado do texto) */
+button.copiar {
+    height: 1.5rem;
+    width: 200px;
+    margin: 0 auto;
+    margin-top: 0.8rem;
+    background: #F6f6f6
+}
+
+.copiar {
+    /* position: relative; */
+    /* margin-top: 30px;
+    margin-left: 150px; */
+    font-size: 0.6rem;
+    border-radius: 30px;
+    color: #6b3764;
+    border-color: #6b3764;
+
+
+}
+
+#encriptado {
+    resize: none;
+    display: none;
+    border: none;
+
+    height: 15rem;
+
+    margin: 0 0.5rem;
+
+    text-align: center;
+
+    font-size: 20px;
+    background-color: #F6f6f6;
+    color: #0A3871;
+}
+
+#encriptado:focus{
+    outline: none;
+}
