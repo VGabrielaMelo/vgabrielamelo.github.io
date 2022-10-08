@@ -1,0 +1,201 @@
+* { 
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #F3F5FC;
+    font-family:Georgia, 'Times New Roman', Times, serif;
+}
+
+:root {
+    --cor-botaoCinza: #D8DFE8;
+    --cor-azulEscuro: #0A3871;
+    --cor-mensagem-ajuda: #495057;
+}
+
+.container {
+    width: 90%;
+    margin: 0 auto;
+}
+
+main {
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    width: 510px;
+    margin: 20px auto;
+    position: relative;
+}
+
+.letras-erradas {
+    font-size: 30px;
+    color: var(--cor-azulEscuro);
+}
+
+header {
+    margin: 15px 0;
+}
+
+.logo {
+    width: 30px;
+    margin-right: 5px;
+}
+
+h1 {
+    font-size: 19px;
+    margin-bottom: 20px;
+    color: var(--cor-azulEscuro);
+}
+
+form {
+    width: 530px;
+    margin: 0 auto;
+}
+
+textarea {
+    width: 500px;
+    height: 300px;
+    margin-bottom: 20px;
+    resize: none;
+    border: none;
+    font-size: 24px;
+    background: transparent;
+    color: var(--cor-azulEscuro);
+}
+
+textarea:focus {
+    outline: 0;
+}
+
+/*Estilização dos botões*/
+
+button{
+    border-radius: 20px;
+    height: 50px;
+    width: 260px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+}
+
+#btnInicio {
+    display: block;
+    width: 270px;
+    height: 120px;
+    margin: 100px auto;
+}
+
+#comecarJogo {
+    height: 80px;
+    display: block;
+    border-radius: 20px;
+}
+
+#btnAdicionarPalavra {
+    height: 80px;
+    display: block;
+    border-radius: 20px;
+    transition: 3s;
+    color: var(--cor-azulEscuro)
+}
+
+.btn-principal {
+    background: var(--cor-azulEscuro);
+    color: white;
+    margin-bottom: 20px;
+}
+
+.btn-secundario {
+    background-color: transparent;
+    border: 1px solid var(--cor-azulEscuro);
+    font-weight: 500;
+}
+
+.botoes {
+    
+    width: 530px;
+    margin: 0 auto;
+    margin-bottom: 20px;
+}
+
+#importante {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    color: var(--cor-mensagem-ajuda);
+    margin-bottom: 20px;
+    font-family: 'Inter';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 150%;
+}
+
+#importante ion-icon {
+    font-size: 20px;
+}
+
+.palavra-secreta {
+    color: var(--cor-azulEscuro);
+    font-size: 40px;
+    letter-spacing: 15px;
+    text-align: center;
+}
+
+.letras-erradas {
+    color: rgb(148, 147, 147);
+    font-size: 20px;
+    text-align: center;
+    letter-spacing: 7px;
+}
+
+.palavras {
+    margin-bottom: 10px;
+}
+
+
+
+.perdedor {
+    font-size: 17px;
+    font-family: Arial, Helvetica, sans-serif;
+    margin-top: 50px;
+    margin-left: 15px;
+    display: none;
+    color: red;
+}
+
+
+.vencedor {
+    color: green;
+}
+
+canvas {
+    margin-bottom: 20px;
+    float: left;
+    width: 350px;
+    height: 300px;
+}
+
+
+/*Escondendo as seções*/
+
+section {
+    display: none;
+}
+
+footer {
+    display: flex;
+    position: absolute; 
+    flex-direction: column;
+    text-align: center;    
+    font-size: 18px;
+    color: #0A3871;
+    height: 3.5rem; 
+    width: 100%; 
+    bottom: 0px;
+}
+
+footer a {
+text-decoration: none;
+color: #0A3871;
+}
+
