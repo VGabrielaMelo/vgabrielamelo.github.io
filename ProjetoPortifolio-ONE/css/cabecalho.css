@@ -1,0 +1,38 @@
+.cabecalho {
+	background-color:#793354;
+    color: #fdfdfd;
+    
+    width: 100%;
+    height: 10rem;
+
+    box-sizing: border-box;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+	padding-top: .75rem;
+    padding-bottom: .75rem;
+
+    position: absolute;
+}
+
+.cabecalhoTitulo {
+	font-size: 2rem;
+    margin-top: 1rem;
+	margin-bottom: 1.5rem;
+}
+
+.cabecalhoNavegacao {
+    text-align: center;
+}
+
+.cabecalhoLink {
+    display: inline-block;
+
+    font-size: 1.2rem;
+
+    margin-bottom: 1.25rem;
+    margin-left: .7rem;
+    margin-right: .7rem;
+}

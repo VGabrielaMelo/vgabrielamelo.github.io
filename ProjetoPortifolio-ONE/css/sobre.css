@@ -1,0 +1,17 @@
+.sobre {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 5rem;
+}
+
+.sobreTitulo {
+    font-size: 2rem;
+    font-weight: bold;
+    padding-top: 4rem;
+    padding-bottom: 1.8rem;
+}
+
+.sobreDescricao {
+    font-size: 1.2rem;
+    line-height: 1.5rem;
+}

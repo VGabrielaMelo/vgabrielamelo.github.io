@@ -1,0 +1,23 @@
+body {
+    font-family: 'Open Sans', sans-serif;
+    background-color: #fcfcfc;
+}
+
+.logo {
+    max-width: 1.5rem;
+    max-height: 1.5rem;
+    width: auto;
+    height: auto;
+}
+
+.container {
+    padding-right: 6%;
+    padding-left: 6% ;
+}
+
+.botao {
+    padding: .3rem .2rem;
+
+    border-bottom: 2px solid #fcfc;
+    border-radius: 5px;
+}

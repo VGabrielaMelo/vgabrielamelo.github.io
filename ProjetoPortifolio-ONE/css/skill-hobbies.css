@@ -1,0 +1,61 @@
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 30px;
+}
+
+.skills {
+    text-align: center;
+    padding-top: 80px;
+}
+
+.skillTitulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: .5rem;
+    padding-bottom: 1.8rem;
+}
+
+.skillLista {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.skillItem {
+    padding-top: 10px;
+}
+
+.skillImagem {
+    width: 3rem;
+}
+
+.hobbies {
+    text-align: center;
+    padding-top: 80px;
+    justify-content: space-evenly;
+}
+
+.hobbiesTitulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 5rem;
+    padding-bottom: 1.8rem;
+}
+
+.hobbiesLista {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 1rem 0;
+}
+
+.hobbiesItem {
+    padding-top: 10px;
+    padding: 1rem 0;
+}
+
+.hobbiesImagem {
+    width: 3rem;
+    padding: .2rem;
+}

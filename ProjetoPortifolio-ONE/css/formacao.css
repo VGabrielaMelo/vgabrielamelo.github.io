@@ -1,0 +1,38 @@
+.formacao {
+    align-items: center;
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.formacaoTitulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 4rem;
+    padding-bottom: 1.8rem;
+}
+
+.formacaoLista {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+.formacaoLista-Imagem {
+    display:flex;
+    align-items: center;
+    width: 10rem;
+}
+
+.formacaoLista-Titulo {
+    font-size: 1rem;
+    font-weight: bold;
+    padding-top: 2rem;
+    padding-bottom: 1.5rem;
+}
+
+.formacaoLista-Descricao {
+    font-size: .5rem;
+    padding-top: 2rem;
+    padding-bottom: 1.8rem;
+}
