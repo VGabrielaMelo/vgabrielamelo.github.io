@@ -1,70 +1,112 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title> Jogo da forca - ONE </title>
+        <script type="text/javascript" src="./js/script.js" defer></script>
+        <script type="text/javascript" src="./js/boneco.js" defer></script>
 
-    <link rel="stylesheet" href="./css/reset.css">
-    <link rel="stylesheet" href="./css/style.css">
-</head>
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="icon" href="img/logo_alura.png">
+        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
 
-<body>
-    <div class="container">
-        <header>
-            <span>
-            <a href=""><img src="./img/Logo.png" alt="Logo Alura"></a>
-            </span>
+        <title> Jogo da Forca - ONE </title>
+    </head>
+
+    <body>
+        <header class="header" id="header">
+            <a href="https://www.aluracursos.com/" target="_blank"><img src="img/logo_alura.png" alt="logo alura" class="logo"></a>
         </header>
-    
-        <section id="btnInicio">
-            <button id="comecarJogo" class="btn-principal"> Comecar a jogar </button>
-            <button id="btnAdicionarPalavra" class="btn-secundario"> Adicionar nova palavra </button>
-        </section>
-        
-        <section class="jogo-da-forca">
-            <main>
-                <h1> Digite no teclado uma letra e tente adivinhar a palavra! </h1>
-                <div class="mensagens">
-                    <canvas width="350px" height="300px"></canvas>
-                    <div class="mensagem">
-                        <h2 class="perdedor"></h2>
-                        <h2 class="vencedor"></h2>
+
+        <main>
+            <!-- Menu inicial do jogo -->
+            <section class="section" id="inicio">
+                <div class="container">
+                    <div class="conteCentrado">
+                        <input class="botaoUniversal" id="btnIniciarJogo" type="submit" value="Iniciar Novo Jogo">
+                        <input class="botaoUniversal" id="btnAddPalavra" type="submit" value="Adicionar Nova Palavra">
                     </div>
                 </div>
-                <div class="palavras">
-                    <div class="palavra-secreta"></div>
-                    <div class="letras-erradas"></div>
-                </div>
-            </main>
-            <div class="botoes">
-                <button id="novojogo" class="btn-principal" onclick="novoJogo()"> Novo Jogo </button>
-                <button id="desistir" class="btn-secundario"> Desistir </button>
-            </div>
-        </section>
-        <section id="addPalavra">
-            <form method="get" id="form">
-                <textarea name="nova-palavra" id="nova-palavra" cols="30" rows="10" placeholder="Digite a nova palavra aqui"></textarea>
-                <div id="importante">
-                    <ion-icon name="alert-circle-sharp"></ion-icon>
-                    <p> Máx, de 8 letras </p>
-                </div>
-                <div class="botoes">
-                    <button id="enviar-palavra" class="btn-principal"> Salvar e enviar </button>
-                    <button id="cancelar" class="btn-secundario"> Cancelar </button>
-                </div>
-            </form>
-        </section>
-    </div>    
-    <footer class="footer"> 
-        <p>&#169; 2022 <a href="https://www.linkedin.com/in/vgabrielamelo/" rel="noreferrer noopener" target="_blank"> Gabriela Melo </a></p>
-    </footer>
+            </section>
 
-    <script src="./js/jogo.js"></script>
-    <script src="./js/add-palavras.js"></script>
-    <script src="./js/corpodaforca.js"></script>
-    <script src="./js/palavras.js"></script>
-</body>
+            <!-- Jogo da Forca -->
+            <section class="ocultarSection" id="jogo">
+                <div class="container">
+                    <canvas width="350" height="360"></canvas>
+                    <div id="contPalavraSecreta"></div>
+                    <div id="contLetrasUsadas"></div>
+                </div>
+            </section>
+
+            <!-- Add Novas Palavras Secretas -->
+            <section class="ocultarSection" id="vistapalavra">
+                <div class="container">
+                    <div class="conteCentrado">
+                        <input id="palavra" placeholder="Escreva aqui" maxlength="8" onkeypress="return condicionpalavra(event);" onkeyup="converterMaiuscula(this);" type="text">
+                        <img src="img/alerta.png" alt="símbolo de alerta"> Máximo 8 e mínimo 3 caracteres (sem acentos). </img>
+                        <input class="botaoUniversal" id="btnAdd" type="submit" value="Add">
+                        <button class="botaoUniversal" id="btnVoltar"> Voltar </button>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Janela Flutuante -->
+            <div class="ocultarSection" id="mensagemJogo">
+                <div id="containerJanelaFlutuante"></div>
+                <div id="BtnJanelaFlutuante">
+                    <button id="btnAceitar" class="botaoUniversal"> Aceitar </button>
+                </div>
+            </div>
+        </main>
+
+        <!-- Teclado -->
+        <section class="ocultarSection" id="vistaTeclado">
+                <div class="conteCentrado" id="teclado">
+                    <button id="letraA" class="tecla" onclick="teclaPessionada('A'); contErros('A'); contAcertos('A');"> A </button>
+                    <button id="letraB" class="tecla" onclick="teclaPessionada('B'); contErros('B'); contAcertos('B');"> B </button>
+                    <button id="letraC" class="tecla" onclick="teclaPessionada('C'); contErros('C'); contAcertos('C');"> C </button>
+                    <button id="letraD" class="tecla" onclick="teclaPessionada('D'); contErros('D'); contAcertos('D');"> D </button>
+                    <button id="letraE" class="tecla" onclick="teclaPessionada('E'); contErros('E'); contAcertos('E');"> E </button>
+                    <button id="letraF" class="tecla" onclick="teclaPessionada('F'); contErros('F'); contAcertos('F');"> F </button>
+                    <button id="letraG" class="tecla" onclick="teclaPessionada('G'); contErros('G'); contAcertos('G');"> G </button>
+                    <button id="letraH" class="tecla" onclick="teclaPessionada('H'); contErros('H'); contAcertos('H');"> H </button>
+                    <button id="letraI" class="tecla" onclick="teclaPessionada('I'); contErros('I'); contAcertos('I');"> I </button>
+                    <button id="letraJ" class="tecla" onclick="teclaPessionada('J'); contErros('J'); contAcertos('J');"> J </button>
+                    <button id="letraK" class="tecla" onclick="teclaPessionada('K'); contErros('K'); contAcertos('K');"> K </button>
+                    <button id="letraL" class="tecla" onclick="teclaPessionada('L'); contErros('L'); contAcertos('L');"> L </button>
+                    <button id="letraM" class="tecla" onclick="teclaPessionada('M'); contErros('M'); contAcertos('M');"> M </button>
+                    <button id="letraN" class="tecla" onclick="teclaPessionada('N'); contErros('N'); contAcertos('N');"> N </button>
+                    <button id="letraO" class="tecla" onclick="teclaPessionada('O'); contErros('O'); contAcertos('O');"> O </button>
+                    <button id="letraP" class="tecla" onclick="teclaPessionada('P'); contErros('P'); contAcertos('P');"> P </button>
+                    <button id="letraQ" class="tecla" onclick="teclaPessionada('Q'); contErros('Q'); contAcertos('Q');"> Q </button>
+                    <button id="letraR" class="tecla" onclick="teclaPessionada('R'); contErros('R'); contAcertos('R');"> R </button>
+                    <button id="letraS" class="tecla" onclick="teclaPessionada('S'); contErros('S'); contAcertos('S');"> S </button>
+                    <button id="letraT" class="tecla" onclick="teclaPessionada('T'); contErros('T'); contAcertos('T');"> T </button>
+                    <button id="letraU" class="tecla" onclick="teclaPessionada('U'); contErros('U'); contAcertos('U');"> U </button>
+                    <button id="letraV" class="tecla" onclick="teclaPessionada('V'); contErros('V'); contAcertos('V');"> V </button>
+                    <button id="letraW" class="tecla" onclick="teclaPessionada('W'); contErros('W'); contAcertos('W');"> W </button>
+                    <button id="letraX" class="tecla" onclick="teclaPessionada('X'); contErros('X'); contAcertos('X');"> X </button>
+                    <button id="letraY" class="tecla" onclick="teclaPessionada('Y'); contErros('Y'); contAcertos('Y');"> Y </button>
+                    <button id="letraZ" class="tecla" onclick="teclaPessionada('Z'); contErros('Z'); contAcertos('Z');"> Z </button>
+                </div>
+                <div class="containerBtnMenor">
+                    <button id="btnNovoJogo" class="botaoUniversal btnMenor"> Novo Jogo </button>
+                    <button id="btnDesistir" class="botaoUniversal btnMenor"> Desistir </button>
+                </div>
+        </section>
+
+        <!-- Rodape -->
+        <footer class="footer" id="footer">
+            <div>
+                <a href="https://www.linkedin.com/in/vgabrielamelo/" target="_blank"><img src="img/linkedIn.png" alt="logo linkedin" class="logo"></a>
+                <a href="https://github.com/VGabrielaMelo" target="_blank"><img src="img/github.png" alt="logo github" class="logo"></a>
+            </div>
+            <div id="copyright">
+                <p> Copyright &copy Gabriela Melo - 2022 </p>
+            </div>
+        </footer>
+    </body>
 </html>

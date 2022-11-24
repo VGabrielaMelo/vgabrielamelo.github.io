@@ -1,201 +1,231 @@
-* { 
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    background-color: #F3F5FC;
-    font-family:Georgia, 'Times New Roman', Times, serif;
-}
-
-:root {
-    --cor-botaoCinza: #D8DFE8;
-    --cor-azulEscuro: #0A3871;
-    --cor-mensagem-ajuda: #495057;
-}
-
-.container {
-    width: 90%;
-    margin: 0 auto;
+/*ESTILOS GENERALES PARA TODAS LAS VISTAS*/
+body {
+    height: 97vh;
+    font-family: 'Inter', sans-serif;
 }
 
 main {
-    height: auto;
-    display: flex;
-    flex-direction: column;
-    width: 510px;
-    margin: 20px auto;
+    height: 70%;
     position: relative;
 }
 
-.letras-erradas {
-    font-size: 30px;
-    color: var(--cor-azulEscuro);
+.logo{
+    margin: 1rem;
+    width: 2rem;
+    filter: drop-shadow(1px 1px 3px rgb(255, 255, 255));
+    transition: 400ms;
 }
 
-header {
-    margin: 15px 0;
-}
-
-.logo {
-    width: 30px;
-    margin-right: 5px;
-}
-
-h1 {
-    font-size: 19px;
-    margin-bottom: 20px;
-    color: var(--cor-azulEscuro);
-}
-
-form {
-    width: 530px;
-    margin: 0 auto;
-}
-
-textarea {
-    width: 500px;
-    height: 300px;
-    margin-bottom: 20px;
-    resize: none;
-    border: none;
-    font-size: 24px;
-    background: transparent;
-    color: var(--cor-azulEscuro);
-}
-
-textarea:focus {
-    outline: 0;
-}
-
-/*Estilização dos botões*/
-
-button{
-    border-radius: 20px;
-    height: 50px;
-    width: 260px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
-}
-
-#btnInicio {
-    display: block;
-    width: 270px;
-    height: 120px;
-    margin: 100px auto;
-}
-
-#comecarJogo {
-    height: 80px;
-    display: block;
-    border-radius: 20px;
-}
-
-#btnAdicionarPalavra {
-    height: 80px;
-    display: block;
-    border-radius: 20px;
-    transition: 3s;
-    color: var(--cor-azulEscuro)
-}
-
-.btn-principal {
-    background: var(--cor-azulEscuro);
-    color: white;
-    margin-bottom: 20px;
-}
-
-.btn-secundario {
-    background-color: transparent;
-    border: 1px solid var(--cor-azulEscuro);
-    font-weight: 500;
-}
-
-.botoes {
-    
-    width: 530px;
-    margin: 0 auto;
-    margin-bottom: 20px;
-}
-
-#importante {
-    display: flex;
-    gap: 10px;
-    align-items: center;
-    color: var(--cor-mensagem-ajuda);
-    margin-bottom: 20px;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 150%;
-}
-
-#importante ion-icon {
-    font-size: 20px;
-}
-
-.palavra-secreta {
-    color: var(--cor-azulEscuro);
-    font-size: 40px;
-    letter-spacing: 15px;
-    text-align: center;
-}
-
-.letras-erradas {
-    color: rgb(148, 147, 147);
-    font-size: 20px;
-    text-align: center;
-    letter-spacing: 7px;
-}
-
-.palavras {
-    margin-bottom: 10px;
-}
-
-
-
-.perdedor {
-    font-size: 17px;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-top: 50px;
-    margin-left: 15px;
-    display: none;
-    color: red;
-}
-
-
-.vencedor {
-    color: green;
-}
-
-canvas {
-    margin-bottom: 20px;
-    float: left;
-    width: 350px;
-    height: 300px;
-}
-
-
-/*Escondendo as seções*/
-
-section {
-    display: none;
+.logo:hover {
+    width: 2.2rem;
+    margin-bottom: 0.5rem;
 }
 
 footer {
-    display: flex;
-    position: absolute; 
-    flex-direction: column;
-    text-align: center;    
-    font-size: 18px;
-    color: #0A3871;
-    height: 3.5rem; 
-    width: 100%; 
-    bottom: 0px;
+    text-align: center;
 }
 
-footer a {
-text-decoration: none;
-color: #0A3871;
+footer img {
+    width: 30px;
+    margin: 1.5em auto;
+    transition: 400ms;
+}
+
+footer img:hover {
+    width: 35px;
+}
+
+#copyright p {
+    font-size: 12px;
+    margin: 0 auto;
+    font-weight: bold;
+}
+
+/*ESTILOS PARA OCULTAR ELEMENTOS*/
+.section {
+    display: block;
+}
+
+.ocultarSection {
+    display: none;
+}
+
+.verLetra {
+    color: #0A3871;
+}
+
+.ocultarLetra {
+    color: transparent;
+}
+
+/*ESTILOS SECCIÓN VISTA INICIAL DEL MENU DEL Jogo*/
+#inicio{
+    height: 100%;
+}
+
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.conteCentrado {
+    width: 320px;
+}
+
+.botaoUniversal {
+    width: 320px;
+    height: 67px;
+    margin: 1rem 0 1rem 0;
+    font-size: 16px;
+    font-weight: bold;
+    color: #ffffff;
+    border: 1px solid #0A3871;
+    background: #0A3871;
+    border-radius: 24px;
+    transition: 500ms;
+}
+
+.botaoUniversal:hover {
+    color: #0A3871;
+    background: #cccccc;
+}
+
+/*ESTILOS SECCIÓN VISTA DEL Jogo AHORCADO*/
+#jogo {
+    height: 100%;
+}
+
+#palavraSecreta {
+    height: 65px;
+}
+
+#teclado {
+    width: 100%;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+}
+
+.tecla {
+    width: 40px;
+    height: 30px;
+    font-size: 16px;
+    margin: 2px 2px 2px 2px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    background-color: #dddddd;
+}
+
+.tecla:hover {
+    color: white;
+    background: #0A3871;
+    border: 1px solid #0A3871;
+}
+
+.containerBtnMenor{
+    text-align: center;
+}
+
+.btnMenor{
+    width: 150px;
+    height: 40px;
+}
+
+/*ESTILOS SECCIÓN VISTA PARA Add palavraS SECRETAS*/
+#vistapalavra {
+    height: 100%;
+}
+
+#palavra {
+    width: 100%;
+    height: 150px;
+    text-align: center;
+    resize: none;
+    outline: none;
+    color: #000000;
+    background-color: #ffffff00;
+    border: 0;
+    font-size: 2rem;
+    font-family: 'Inter', sans-serif;
+}
+
+#palavra::placeholder{
+    font-family: 'Inter', sans-serif;
+    font-size: 2rem;
+    color: #9f9d9d;
+}
+
+/*ESTILOS VENTANA FLOTANTE*/
+#mensagemJogo {
+    width: 300px;
+    height: 200px;
+    background-color: #cccccc;
+    border-radius: 16px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.511);
+    border: 1px solid rgba(205, 205, 205, 0.73);
+}
+
+#containerJanelaFlutuante {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#BtnJanelaFlutuante {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#btnAceitar {
+    width: 260px;
+}
+
+/*ESTILOS PARA palavra SECRETA*/
+#contPalavraSecreta {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+#contPalavraSecreta div {
+    width: 25px;
+    height: 30px;
+    margin: 5px;
+    border-bottom: 3px solid #0A3871;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.letra {
+    margin: 0 10px;
+    text-align: center;
+}
+
+.letra::after {
+    content: ' ';
+    display: block;
+    left: 0;
+    width: 100%;
+    height: 1px;
+    background-color: #fff;
+    min-width: 12px;
 }
 
