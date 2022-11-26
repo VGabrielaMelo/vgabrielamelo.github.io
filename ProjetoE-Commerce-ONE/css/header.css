@@ -1,0 +1,42 @@
+.header-bg {
+  background: #ffff;
+  padding: 32px 0;
+}
+
+.header {
+  display: flex;
+  /* flex-wrap: wrap; */
+  justify-content: space-between;
+}
+
+.header div {
+  display: flex;
+  justify-content: left;
+  gap: 3%;
+}
+
+.pesquisa {
+  padding: 0px 10px;
+  display: flex;
+  background: var(--cor-1);
+  border-radius: 20px;
+  width: 400px;
+  align-items: center;
+  max-width: 100vw;
+}
+
+.header .pesquisa input {
+  border: none;
+  background: inherit;
+  border-radius: inherit;
+  height: 100%;
+  width: 100%;
+  outline: none;
+}
+
+@media (max-width: 700px) {
+  div.pesquisa,
+  .pesquisa input {
+    display: none;
+  }
+}

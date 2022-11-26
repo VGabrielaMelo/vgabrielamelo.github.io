@@ -1,0 +1,43 @@
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.botao,
+.botao-secundario {
+  display: inline-block;
+  border: 1.5px solid var(--cor-p1);
+  background: var(--cor-p1);
+  max-width: 100%;
+  padding: 12px;
+  min-width: 120px;
+  transition: 300ms;
+}
+
+a.botao {
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+header .botao-secundario {
+  background: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  text-align: center;
+  margin-left: 12px;
+  max-width: 200px;
+}
+
+.botao-secundario:hover {
+  background: var(--cor-p2);
+}
+
+.botao:hover {
+  background: #5595e9;
+  border: 1.5px solid #5595e9;
+}

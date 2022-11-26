@@ -1,0 +1,53 @@
+.font-xxl {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.25rem;
+  line-height: 61px;
+  font-weight: bold;
+}
+
+.font-xl {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.font-x {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.372rem;
+  font-weight: bold;
+}
+
+.font-g-b,
+.font-g {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.font-g {
+  font-weight: 500;
+}
+
+.font-p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 800px) {
+  .font-xl {
+    font-size: 1.372rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-xxl {
+    font-size: 1.372rem;
+    line-height: 26px;
+  }
+
+  .font-x {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}

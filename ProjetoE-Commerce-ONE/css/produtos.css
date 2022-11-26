@@ -1,0 +1,36 @@
+.categoria {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(150px, max-content));
+  justify-content: center;
+  gap: 16px;
+  margin-bottom: 4rem;
+}
+
+.categoria img {
+  max-height: 175px;
+}
+
+.produtos__descricao {
+  margin-top: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+@media (max-width: 800px) {
+  .categoria {
+    margin-bottom: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .categoria {
+    display: flex;
+    overflow-x: scroll;
+    justify-content: initial;
+    margin-bottom: 1rem;
+  }
+  .categoria li {
+    min-width: 150px;
+  }
+}

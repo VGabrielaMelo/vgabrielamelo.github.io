@@ -1,0 +1,45 @@
+.footer-bg {
+  background: var(--cor-p3);
+  padding: 64px 0;
+}
+
+.footer {
+  display: grid;
+  grid-template-columns: 3fr 3fr 6fr;
+}
+
+.footer .formulario {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.footer nav ul {
+  display: flex;
+  flex-direction: column;
+  gap: 22px;
+}
+
+.copy {
+  text-align: center;
+  padding: 32px 0;
+}
+
+@media screen and (max-width: 768px) {
+  .footer-bg {
+    padding: 24px;
+  }
+  .footer {
+    grid-template-columns: 1fr;
+  }
+
+  .footer img {
+    margin: 0 auto;
+    margin-bottom: 16px;
+  }
+  .footer nav {
+    text-align: center;
+    margin-bottom: 32px;
+  }
+}
