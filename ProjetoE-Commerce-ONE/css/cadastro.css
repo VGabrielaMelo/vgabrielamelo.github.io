@@ -33,7 +33,7 @@
 }
 
 @media (max-width: 600px) {
-  #cadastro-produtos .cadastro {
+  #cadastroProdutos .cadastro {
     padding: 16px 0;
   }
 }

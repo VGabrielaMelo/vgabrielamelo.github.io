@@ -1,15 +1,15 @@
 /* global */
-@import "./global.css";
-@import "./header.css";
-@import "./footer.css";
+@import "./reset.css";
+@import "./cabecalho.css";
+@import "./rodape.css";
 
 /* utilidades */
 @import "./formulario.css";
 @import "./base.css";
 
 /* homepage */
-@import "./introducao.css";
+@import "./destaque.css";
 @import "./produtos.css";
 
 /* login */
-@import "./form.css";
+@import "./cadastro.css";
