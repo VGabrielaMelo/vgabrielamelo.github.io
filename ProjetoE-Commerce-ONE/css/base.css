@@ -1,0 +1,134 @@
+/* Cores */
+:root {
+  --cor-p1: #2a7ae4;
+  --cor-p2: #d4e4fa;
+  --cor-p3: #eaf2fd;
+  --cor-0: #e5e5e5;
+  --cor-1: #f5f5f5;
+  --cor-2: #a2a2a2;
+  --cor-3: #464646;
+}
+
+.cor-p1 {
+  color: var(--cor-p1);
+}
+
+.cor-p2 {
+  color: var(--cor-p2);
+}
+
+.cor-0 {
+  color: var(--cor-0);
+}
+
+.cor-1 {
+  color: var(--cor-1);
+}
+
+.cor-2 {
+  color: var(--cor-2);
+}
+
+.cor-3 {
+  color: var(--cor-3);
+}
+
+/* Fonte */
+.font-xxl {
+  font-family: "Raleway", sans-serif;
+  font-size: 3.25rem;
+  line-height: 61px;
+  font-weight: bold;
+}
+
+.font-xl {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 2rem;
+}
+
+.font-x {
+  font-family: "Raleway", sans-serif;
+  font-size: 1.372rem;
+  font-weight: bold;
+}
+
+.font-g-b,
+.font-g {
+  font-family: "Raleway", sans-serif;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.font-g {
+  font-weight: 500;
+}
+
+.font-p {
+  font-family: "Raleway", sans-serif;
+  font-weight: 500;
+  font-size: 0.875rem;
+}
+
+@media (max-width: 800px) {
+  .font-xl {
+    font-size: 1.372rem;
+  }
+}
+
+@media (max-width: 600px) {
+  .font-xxl {
+    font-size: 1.372rem;
+    line-height: 26px;
+  }
+
+  .font-x {
+    font-size: 0.875rem;
+    font-weight: 600;
+  }
+}
+
+/* . */
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+  box-sizing: border-box;
+}
+
+.botao,
+.botao-secundario {
+  display: inline-block;
+  border: 1.5px solid var(--cor-p1);
+  background: var(--cor-p1);
+  max-width: 100%;
+  padding: 12px;
+  min-width: 120px;
+  transition: 300ms;
+}
+
+a.botao {
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+header .botao-secundario {
+  background: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 30vw;
+  text-align: center;
+  margin-left: 12px;
+  max-width: 200px;
+}
+
+.botao-secundario:hover {
+  background: var(--cor-p2);
+}
+
+.botao:hover {
+  background: #5595e9;
+  border: 1.5px solid #5595e9;
+}

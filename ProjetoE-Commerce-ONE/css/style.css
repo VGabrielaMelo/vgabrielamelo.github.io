@@ -4,10 +4,8 @@
 @import "./footer.css";
 
 /* utilidades */
-@import "./utilidades/tipografia.css";
-@import "./utilidades/formulario.css";
-@import "./utilidades/componentes.css";
-@import "./utilidades/cores.css";
+@import "./formulario.css";
+@import "./base.css";
 
 /* homepage */
 @import "./introducao.css";
