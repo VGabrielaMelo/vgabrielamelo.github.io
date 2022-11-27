@@ -99,8 +99,8 @@
 .botao,
 .botao-secundario {
   display: inline-block;
-  border: 1.5px solid var(--cor-p1);
-  background: var(--cor-p1);
+  border: 1.5px solid cor-p1;
+  background: cor-p1;
   max-width: 100%;
   padding: 12px;
   min-width: 120px;
@@ -125,7 +125,7 @@ header .botao-secundario {
 }
 
 .botao-secundario:hover {
-  background: var(--cor-p2);
+  background: cor-p2;
 }
 
 .botao:hover {

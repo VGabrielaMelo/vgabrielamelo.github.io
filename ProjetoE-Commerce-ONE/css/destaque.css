@@ -1,6 +1,6 @@
 .intro {
   background: linear-gradient(rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.7)),
-    url("../../img/intro-desktop.jpg");
+    url("../../ProjetoE-Commerce-ONE/img/intro-desktop.jpg");
   background-repeat: no-repeat;
   background-size: cover;
 
@@ -23,7 +23,7 @@
 
 @media (max-width: 800px) {
   .intro {
-    background: url("../../assets/img/intro-tablet.jpg");
+    background: url("../../ProjetoE-Commerce-ONE/img/intro-tablet.jpg");
     /* background-repeat: no-repeat; */
     background-size: cover;
     color: black;
