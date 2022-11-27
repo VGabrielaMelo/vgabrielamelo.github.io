@@ -71,10 +71,10 @@
   color: var(--cor-erro);
 }
 
-.input-mensagem-erro {
+.mensagemErro {
   display: none;
 }
-.input-container--invalido .input-mensagem-erro {
+.input-container--invalido .mensagemErro {
   color: var(--cor-erro);
   display: block;
   margin-top: 0.5rem;

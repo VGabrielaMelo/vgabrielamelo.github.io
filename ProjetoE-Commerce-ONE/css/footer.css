@@ -1,4 +1,4 @@
-.footer-bg {
+.footerContainer {
   background: var(--cor-p3);
   padding: 64px 0;
 }
@@ -27,7 +27,7 @@
 }
 
 @media screen and (max-width: 768px) {
-  .footer-bg {
+  .footerContainer {
     padding: 24px;
   }
   .footer {

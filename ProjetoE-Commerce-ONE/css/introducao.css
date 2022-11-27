@@ -11,13 +11,13 @@
   padding-bottom: 36px;
 }
 
-.intro__conteudo {
+.intro-conteudo {
   display: flex;
   flex-direction: column;
   gap: 16px;
 }
 
-.intro__conteudo a {
+.intro-conteudo a {
   max-width: fit-content;
 }
 
@@ -29,7 +29,7 @@
     color: black;
   }
 
-  .intro__conteudo a {
+  .intro-conteudo a {
     box-sizing: border-box;
     padding: 12px 16px;
   }
@@ -42,7 +42,7 @@
     color: black;
   }
 
-  .intro__conteudo {
+  .intro-conteudo {
     gap: 8px;
   }
 }

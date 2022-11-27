@@ -10,7 +10,7 @@
   max-height: 175px;
 }
 
-.produtos__descricao {
+.produtoDescricao {
   margin-top: 8px;
   display: flex;
   flex-direction: column;
