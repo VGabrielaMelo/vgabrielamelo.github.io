@@ -8,15 +8,7 @@
         <title> Portfólio </title>
 
         <link rel="shortcut icon" href="./img/favicon.icon" type="image/x-icon">
-        <link rel="stylesheet" href="./css/reset.css">
         <link rel="stylesheet" href="./css/base.css">
-        <link rel="stylesheet" href="./css/cabecalho.css">
-        <link rel="stylesheet" href="./css/redes.css">
-        <link rel="stylesheet" href="./css/sobre.css">
-        <link rel="stylesheet" href="./css/skill-hobbies.css">
-        <link rel="stylesheet" href="./css/formacao.css">
-        <link rel="stylesheet" href="./css/contato.css">
-        <link rel="stylesheet" href="./css/rodape.css">
     </head>
 
     <body>
@@ -26,17 +18,17 @@
             </h1>
 
             <nav class="cabecalhoNavegacao">
-                <a class="cabecalhoLink botao #sobre"> Sobre mim </a>
+                <a href="#sobre" class="cabecalhoLink botao"> Sobre mim </a>
 
-                <a class="cabecalhoLink botao"> Skill </a>
+                <a href="#hobbies" class="cabecalhoLink botao"> Hobbies </a>
+                
+                <a href="#skills" class="cabecalhoLink botao"> Skill </a>
 
-                <a class="cabecalhoLink botao"> Hobbies </a>
+                <a href="#formacao" class="cabecalhoLink botao"> Formação </a>
 
-                <a class="cabecalhoLink botao"> Formação </a>
+                <a href="#projetos" class="cabecalhoLink botao"> Projetos </a>
 
-                <a class="cabecalhoLink botao"> Projetos </a>
-
-                <a class="cabecalhoLink"> contato@contato.com </a>
+                <a class="cabecalhoLink"> vgmdasilva@gmail.com </a>
             </nav>
         </header>
 
@@ -53,18 +45,15 @@
                     <img src="img/github.png" alt="Logo do Github" class="logo"><a class="redesLink" 
                     href="https://github.com/VGabrielaMelo" target="_blank"> Github </a>
 
-                    <img src="img/aviao-de-papel.png" alt="Logo do Telegram" class="logo"><a class="redesLink" 
-                    href="#" target="_blank"> Telegram </a>
-
                     <img src="img/instagram.png" alt="Logo do Instagram" class="logo"><a class="redesLink" 
                     href="https://www.instagram.com/vgabriela.melo/" target="_blank"> Instagram </a>
 
                     <img src="img/forma.png" alt="Curriculo" class="logo"><a class="redesLink" 
-                    href="vgabrielamelo.github.io/ProjetoCurriculo-EBAC/" target="_blank"> Curriculo </a>
+                    href="../ProjetoCurriculo-EBAC/index.html" target="_blank"> Curriculo </a>
                 </nav>
             </section>
             
-            <section class="sobre container">
+            <section class="sobre container" id="sobre">
                 <h2 class="sobreTitulo"> Sobre Mim </h2>
                 <p class="sobreDescricao"> 
                     Tenho 22 anos e sou Portoalegrese. Conclui minha graduação em Processos Gerenciais, estou finalizando minha pós-graduação em Ciência de Dados e, 
@@ -77,7 +66,7 @@
                 </p>
             </section>
 
-            <section class="hobbies container">
+            <section class="hobbies container" id="hobbies">
                 <h2 class="hobbiesTitulo"> Hobbies </h2>
                 <div class="box">
                     <div class="hobbiesLista">
@@ -112,7 +101,7 @@
                 </div>
             </section>
 
-            <section class="skills container">
+            <section class="skills container" id="skills">
                 <h3 class="skillTitulo"> Hard Skill </h3>
                 <div class="box">
                     <div class="skillLista"> 
@@ -167,27 +156,57 @@
                 </div>
             </section>
 
-            <section class="formacao container">
+            <section class="formacao container" id="formacao">
                 <h2 class="formacaoTitulo"> Formação Acadêmica </h2>
                 <div class="box">
                     <div class="formacaoLista">
                         <img class="formacaoLista-Imagem" src="./img/logoUni.png" alt="Logo Uniasselvi">
-                        <h3 class="formacaoLista-Titulo"> | Graduação em Processos Gerenciais | </h3>
-                        <!-- <p class="formacaoLista-Descricao"> 2020/2022 - UNIASSELVI </p> -->
+                        <h3 class="formacaoLista-Titulo"> Graduação em Processos Gerenciais </h3>
+                        <p class="formacaoLista-Descricao"> Fev. 2020 - Jul. 2022 </p>
                     </div>
 
                     <div class="formacaoLista">
                         <img class="formacaoLista-Imagem" src="./img/logoUni.png" alt="Logo Uniasselvi">
-                        <h3 class="formacaoLista-Titulo"> | Pós-Graduação em Ciência de Dados | </h3>
-                        <!-- <p class="formacaoLista-Descricao"> 2022/2023 - UNIASSELVI </p> -->
+                        <h3 class="formacaoLista-Titulo"> Pós-Graduação em Ciência de Dados </h3>
+                        <p class="formacaoLista-Descricao"> Jul. 2022 - Jan. 2023 </p>
+                    </div>
+
+                    <div class="formacaoLista">
+                        <img class="formacaoLista-Imagem logoSenac" src="./img/logo-SENAC.png" alt="Logo Senac">
+                        <h3 class="formacaoLista-Titulo"> Formação em Python </h3>
+                        <p class="formacaoLista-Descricao"> Mai. 2022 - Out. 2022 </p>
                     </div>
 
                     <div class="formacaoLista">
                         <img class="formacaoLista-Imagem" src="./img/logoAlura2.png" alt="Logo ONE">
-                        <h3 class="formacaoLista-Titulo"> | Programa ONE | </h3>
-                        <!-- <p class="formacaoLista-Descricao"> 2022 - Oracle/Alura </p> -->
+                        <h3 class="formacaoLista-Titulo"> Oracle Next Education </h3>
+                        <p class="formacaoLista-Descricao"> Jul. 2022 - Jan. 2023 </p>
                     </div>
                 </div>
+            </section>
+
+            <section class="projetos container" id="projetos">
+                <h2 class="projetosTitulo"> Projetos </h2>
+                <hr width="100%">
+                <div class="projetoDivisao">
+                    <h3 class="projetosLista-Titulo"> ► Projeto Decodificador </h3>
+                    <p class="projetosLista-Descricao"> Projeto que visa codificar e decodificar o texto digitado. </p>
+                    <a href="../ProjetoCodificador-ONE/index.html" 
+                        ="_blank" class="botao"> Visualizar projeto </a>
+
+                    <img class="projetosLista-Fotos" src="./img/Projeto1.png" alt="Imagem do Projeto">
+                </div>
+                <hr width="100%">
+                <div class="projetosDivisao">
+                    <h3 class="projetosLista-Titulo"> ► Projeto Jogo da Forca </h3>
+                    <p class="projetosLista-Descricao"> Projeto que monta um básico jogo da forca para os usuários se 
+                        divertirem e que é possivel adicionar palavras. </p>
+                    <a href="../ProjetoCodificador-ONE/index.html" 
+                        ="_blank" class="botao"> Visualizar projeto </a>
+
+                    <img class="projetosLista-Fotos" src="./img/Projeto2.png" alt="Imagem do Projeto">
+                </div>
+                <hr width="100%">
             </section>
         </main>
 

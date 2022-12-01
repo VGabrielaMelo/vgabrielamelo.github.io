@@ -1,3 +1,10 @@
+.box {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    padding: 2rem;
+}
+
 .formacao {
     align-items: center;
     text-align: center;
@@ -13,8 +20,9 @@
 
 .formacaoLista {
     display: flex;
-    flex-direction: row;
-    justify-content: space-evenly;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content:space-between;
     align-items: center;
 }
 
@@ -22,6 +30,10 @@
     display:flex;
     align-items: center;
     width: 10rem;
+}
+
+.logoSenac{
+    width: 7.6rem;
 }
 
 .formacaoLista-Titulo {
@@ -32,7 +44,7 @@
 }
 
 .formacaoLista-Descricao {
-    font-size: .5rem;
-    padding-top: 2rem;
+    font-size: 1rem;
+    padding-top: 1rem;
     padding-bottom: 1.8rem;
 }

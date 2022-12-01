@@ -30,6 +30,8 @@
 .cabecalhoLink {
     display: inline-block;
 
+    color: #fdfdfd;
+
     font-size: 1.2rem;
 
     margin-bottom: 1.25rem;

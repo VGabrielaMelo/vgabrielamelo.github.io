@@ -1,0 +1,27 @@
+.projetos {
+    text-align: center;
+    padding-bottom: 2rem;
+}
+
+.projetosTitulo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding-top: 4rem;
+    padding-bottom: 1.8rem;
+}
+
+.projetosLista-Titulo {
+    font-size: 1.2rem;
+    padding: 1rem;
+
+}
+
+.projetosLista-Descricao {
+    padding: .5rem 0 1rem 0;
+}
+
+.projetosLista-Fotos {
+    width: 40%;
+    margin: 1rem 20rem 1rem 20rem;
+    border: 1px solid black;
+}

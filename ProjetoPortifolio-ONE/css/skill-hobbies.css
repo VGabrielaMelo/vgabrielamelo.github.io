@@ -29,6 +29,7 @@
 
 .skillImagem {
     width: 3rem;
+    padding: .5rem;
 }
 
 .hobbies {
@@ -40,7 +41,7 @@
 .hobbiesTitulo {
     font-size: 1.5rem;
     font-weight: bold;
-    padding-top: 5rem;
+    padding-top: 1rem;
     padding-bottom: 1.8rem;
 }
 
@@ -51,11 +52,11 @@
 }
 
 .hobbiesItem {
-    padding-top: 10px;
+    padding-top: 8px;
     padding: 1rem 0;
 }
 
 .hobbiesImagem {
     width: 3rem;
-    padding: .2rem;
+    padding: .5rem;
 }
