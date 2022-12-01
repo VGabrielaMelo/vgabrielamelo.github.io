@@ -1,0 +1,120 @@
+.left-section {
+    grid-column: span 2;
+    height: 100%;
+    background-color: var(--left);
+}
+
+.left-section-content{
+    padding: 2rem 2rem;
+}
+
+.left-title {
+    color: var(--titulo);
+    font-size: 20px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding-top: 3rem;
+    padding-left: .8rem;
+}
+
+/* Apresentação Inicial*/
+/*
+.profile {
+    width: 100%;
+    border-bottom: 2px solid #1B2631;
+}
+
+.profile .profile-image {
+    width: 100%;
+    border-radius: 50%;
+    border: 8px solid #1B2631;
+}
+*/
+
+.name {
+    color: var(--padrao);
+    font-size: 30px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    text-align: center;
+    font-weight: bold;
+    padding: 3rem 0;
+}
+
+.profession {
+    color: var(--titulo);
+    font-size: 20px;
+    text-transform: uppercase;
+    text-align: center;
+    letter-spacing: 2px;
+    font-weight: bold;
+    padding-bottom: 1rem;
+}
+
+.referance-name {
+    padding-top: 1.5rem;
+    padding-bottom: .4rem;
+    font-size: 18px;
+    color: var(--padrao);
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.referance-profession {
+    font-size: 16px;
+    color: var(--padrao);
+    letter-spacing: 1px;
+    /* text-transform: uppercase; */
+    padding-bottom: .4rem;
+}
+
+/* Contato */
+/* .contact-info { border-bottom: 2px solid #1B2631; } */
+.contact-info ul {
+    padding-top: 1.5rem;
+}
+
+.icons {
+    padding: 0 1rem 0 1rem;
+}
+
+.contact-info ul li,
+.references ul li {
+    padding: .4rem 0;
+    display: flex;
+    align-items: center;
+    color: var(--padrao);
+    letter-spacing: 1px;
+    font-size: 18px;
+}
+
+.contact-info ul li i,
+.references ul li i {
+    padding-right: 1rem;
+    font-size: 18px;
+    color: var(--padrao);
+}
+
+.links {
+    text-decoration: none;
+    color: var(--padrao);
+}
+
+/* Skills */
+.skills ul {
+    padding-top: 1.5rem;
+}
+
+.skills ul li p {
+    padding: .4rem 0;
+    color: var(--padrao);
+    font-size: 18px;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center;
+    text-transform: uppercase;
+    padding-left: .8rem;
+}

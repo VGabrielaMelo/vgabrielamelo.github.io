@@ -1,0 +1,89 @@
+.right-section {
+    grid-column: span 5;
+    height: 100%;
+    background-color: var(--right);
+    /* border-radius: 0px 60px 0px 0px; */
+}
+
+.right-section-contents {
+    padding: 2rem 2rem;
+}
+
+.right-title {
+    color: var(--titulo);
+    font-size: 40px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    position: relative;
+}
+
+.gap {
+    padding-bottom: 2rem;
+}
+
+/* Sobre mim */
+.about-me-contents {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 2rem;
+    color: var(--padrao);
+}
+
+/* Experiencia, Formação, Cursos */
+.exp-right,
+.exp-left {
+    padding: 1.5rem 0 0 0;
+}
+
+.experience-contents,
+.education-contents,
+.course-contents {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    padding-bottom: 2rem;
+    color: var(--padrao);
+}
+
+.exp-company-name,
+.education-school-name,
+.course-company-name {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--titulo);
+    padding-bottom: .4rem;
+}
+
+.exp-time-period,
+.educationp-time-period,
+.course-time-period {
+    font-size: 18px;
+    letter-spacing: 1px;
+    line-height: 2rem;
+}
+
+.exp-position,
+.education-subject,
+.course-name {
+    font-size: 25px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: var(--titulo);
+    padding-bottom: .4rem;
+}
+
+.exp-description,
+.education-desc,
+.course-desc {
+    font-size: 16px;
+    letter-spacing: 1px;
+    line-height: 1.5rem;
+    border-left: 3px solid #a5a3a3;
+    padding-left: 5px;
+}
