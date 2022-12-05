@@ -1,6 +1,5 @@
-@import url("responsivo.css");
-@import url("right.css");
-@import url("left.css");
+@import url("./right.css");
+@import url("./left.css");
 
 :root{
     --fundo: #120907;
@@ -29,3 +28,6 @@ body {
     display: grid;
     grid-template-columns: repeat(7, 1fr);
 }
+
+
+

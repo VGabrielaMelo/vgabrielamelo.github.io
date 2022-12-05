@@ -1,60 +1,27 @@
-# ProjetoDevWeek-EBAC
-# GIT E GITHUB
+# Imersão EBAC - Jornada Dev
 
-Guia prático para iniciantes.
+## 📖 Sobre
 
-### Instalação
+Evento aconteceu no período de 22/11 a 29/11/2022. 
+O objetivo do evento foi criar um Curriculo. Durante os oito dias foram abordados os seguintes assuntos:
 
-download git
+- [x] Conhecendo o GitHub;
+- [x] Introdução das tecnologias;
+- [x] Criando layouts com HTML;
+- [x] Se aprofundando no HTML;
+- [x] Aplicando estilos de cores em CSS;
+- [x] Armazenando o currículo no GitHub Pages;
+- [x] Finalizando o projeto.
 
-# SCENES
+📌 Mais informações [aqui](https://ebaconline.com.br/webinars/jornada-dev-novembro-22-29).
 
-- [x] Você deseja criar pontos na história da produção do seu projetos.
+## 💡 Projeto Final
 
-- [x] Você deseja verificar mudanças feitas no seu projeto.
+https://vgabrielamelo.github.io/ProjetoCurriculo-EBAC
 
-- [x] Você começa uma nova funcionalidade no seu projeto, sem estragar o que já foi feito (branch).
+## 💻 Feito com
 
-- [x] Você adiciona as novas funcionalidades ao seu projeto em produção.
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 
-- [x] Você quer deletar a branch da nova funcionalidade, deopis de aplicar em seu.
-
-- [x] Você quer colocar o seu projeto na nuvem.
-
-- [x] Você vai pegar um projeto já iniciado, para trabalhar com o time.
-
-- [x] Vocè precisa resolver um conflito.
-
-- [x] Antes de enviar a resolução, precimas atualizar o projeto local
-
-- [x] Você precisa voltar um arquivo para um determinando momento da linha do tempo
-
-- [x] Recuperar algo deletado
-
-# COMMANDS
-
-* `git init` // inicia a linha do tempo
-
-* `git add` // adiciona ou atualiza mudanças para irem para a linha do tempo
-
-* `git commit` // adiciona um ponto na linha do tempo
-
-* `git log` // visualiza os pontos na linha do tempo / commit
-
-* `git status` // informa o estado das alterações do nosso projeto
-
-* `git show` // apresenta determinado ponto na história
-
-* `git branch` // gerenciar novas linhas do tempo
-
-* `git checkout` // manipula as linhas do tempo
-
-* `git merge` // unir linhas do tempo
-
-* `git push` // envia alterações locais para o repositório remoto
-
-* `git push origin nome_branch` // publica a branch já no repositório do github
-
-* `git clone` // clonar um projeto
-
-* `git pull` // puxa do repositorio remoto
+<p align="center">Feito por <a href="https://github.com/VGabrielaMelo"> Gabriela Melo </a></p>

@@ -2,7 +2,7 @@
 @media screen and (max-width:780px) {
     .experience-contents,
     .education-contents,
-    .course-contents {
+    .awards-contents {
         grid-template-columns: repeat(1, 1fr);
     }
 }
@@ -11,11 +11,11 @@
     .left-section {
         grid-column: span 3;
     }
-    
+
     .right-section {
         grid-column: span 4;
     }
-    
+
 }
 
 @media screen and (max-width:1200px) {
@@ -68,19 +68,19 @@
 
     .exp-company-name,
     .education-school-name,
-    .course-company-name {
+    .awards-company-name {
         font-size: 18px;
     }
 
     .exp-time-period,
     .educationp-time-period,
-    .course-time-period {
+    .awards-time-period {
         font-size: 16px;
     }
 
     .exp-position,
     .education-subject,
-    .course-name {
+    .awards-name {
         font-size: 18px;
     }
 }
