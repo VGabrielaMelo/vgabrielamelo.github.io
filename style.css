@@ -26,9 +26,9 @@ body{
 }
 
 .bodyBox{
-    /* margin-top: 2%; */
-    width: 85%;
-    height: 85%;
+    margin-top: 2%;
+    width: 90%;
+    height: 90%;
     display: flex;
     align-items: center;
     border: 0.2rem solid #51273d;
@@ -80,4 +80,20 @@ a, a::selection{
 }
 
 /* Media queries */
+@media screen and (max-width:780px) {
+    .lista {
+        display: flex;
+        flex-wrap: wrap;
+        flex-direction: column;
+        align-content: space-between;
+        height: 100vh;
+    }
+}
 
+@media screen and (max-width:480) {
+    .lista {
+        display: flex;
+        align-items: space-between;
+        height: 200px;
+    }
+}
