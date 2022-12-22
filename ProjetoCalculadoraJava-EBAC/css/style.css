@@ -1,0 +1,101 @@
+* {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    box-sizing: border-box;
+    padding: 0; /* Margem de dentro */
+    margin: 0; /* Margem de fora */
+}
+
+body {
+    background-color: #e4dada;
+    color: #51273d;
+}
+
+.container {
+    margin: 80px auto;
+    width: 302px;/* Tamanho que o projeto ocupa */
+}
+
+.header {
+    display: flex;
+    width: 302px;
+    height: 56px;
+    margin-left: .7rem;
+    margin-right: .7rem;
+    gap: .7rem; /* Margem que so funciona com flex */
+}
+
+.header img {
+    width: 50px;
+    height: 50px;
+}
+
+header h1 {
+    font-size: 1.4rem;
+    letter-spacing: 3%;
+}
+
+.form {
+    width: 302px;
+    margin-top: 4rem;
+    margin-left: .7rem;
+    margin-bottom: 2rem;
+}
+
+.form form {
+    display: flex;
+    flex-direction: column;
+}
+
+form label {
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 3%;
+    margin-bottom: .8rem;
+    color: #51273d;
+}
+
+form input {
+    background-color: transparent;
+    color: #51273d;
+    border: none;
+    border-bottom: 2px solid #35061e;
+    margin-bottom: 2rem;
+    outline: none;
+}
+
+form button {
+    width: 100%;
+    font-size: 1.2rem;
+    background-color: #51273d;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+    padding: .8rem 3rem;
+}
+
+.resultado {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 302px;
+    margin-left: .7rem;
+    background-color: #51273d;
+    padding: .8rem 3rem;
+}
+
+.resultado span {
+    font-size: 1rem;
+    letter-spacing: 6%;
+}
+
+.resultado #valor-total {
+    font-size: 2rem;
+}
+
+.resultado p {
+    font-size: .8rem;
+}
+
+.hidden {
+    display: none;
+}
