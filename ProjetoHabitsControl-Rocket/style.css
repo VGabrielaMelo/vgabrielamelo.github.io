@@ -1,0 +1,108 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: #090904;
+    color: white;
+
+    height: 100vh;
+}
+
+header {
+    background-color: #090904;
+
+    display: flex;
+    align-items: center; /* Só funciona com flex */
+    justify-content: space-between;
+
+    padding: 3rem;
+
+    position: fixed;
+    width: 100%;
+}
+
+button {
+    background-color: transparent;
+    color: white;
+
+    padding: 1rem 1.6rem;
+    border: 2px solid #8d5cf6;
+    border-radius: .5rem;
+
+    display: flex;
+    align-items: center; /* Só funciona com flex */
+    gap: 12px; /* Só funciona com flex. Para adicionar um espaço entre os itens. */ 
+
+    font-family: 'Inter';
+    font-weight: 600;
+    font-size: 1rem;
+    line-height: 125%;
+}
+
+#form-habits {
+    display: flex;
+
+    padding: 12rem 3rem 3rem;
+    width: fit-content; 
+}
+.habits {
+    display: flex;
+    flex-direction: column;
+    gap: 1.6rem;
+    margin-top: 2.2rem;
+}
+.habit {
+    width: 64px;
+    height: 64px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    font-size: 2rem;
+}
+.days {
+    display: flex;
+    gap: 3rem;
+    margin-left: 2rem;
+    text-align: center;
+}
+.day{
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+.day div {
+    margin-bottom: 8px;
+    
+    font-family: 'Roboto Mono';
+    font-size: 20px;
+    line-height: 125%;
+
+    color: #A1A1AA;
+}
+
+main form input {
+    appearance: none; /* Para tirar a aparencia padrão */
+    -webkit-appearance: none;
+    
+    background-color: #18181B;
+    width: 64px;
+    height: 64px;
+    border: 2px solid #8d5cf6;
+    border-radius: 8px;
+}
+/* pseudo-selector */
+main form input:checked {
+    background-color: #8d5cf6;
+    border: 2px solid #A78BFA;
+}
+
+@media (max-width: 570px) {
+    button div {
+        display: none;
+    }
+}
