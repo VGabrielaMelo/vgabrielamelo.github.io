@@ -1,0 +1,32 @@
+body {
+    background-color: #e4dada;
+    width: 95%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.titulo{
+    margin: 1rem;
+    color: #51273d;
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.bodyBox {
+    margin: 1rem;
+    padding: 1rem 2rem;
+    border: 0.5rem solid #51273d;
+    border-radius: 1rem;
+}
+
+.desafios {
+    margin: 1rem;
+    font-size: 1.3rem;
+    text-decoration: none;
+}
+
+.desafios a {
+    text-decoration: none;
+    color: #51273d;
+}
