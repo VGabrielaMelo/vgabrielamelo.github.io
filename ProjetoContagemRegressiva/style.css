@@ -1,0 +1,45 @@
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Poppins";
+}
+
+body {
+  background-color: #6a3f6d;
+  display: grid;
+  place-content: center;
+  min-height: 100vh;
+  width: 100%;
+}
+
+.countdown {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  color: white;
+  gap: 100px;
+}
+
+.title {
+  grid-column: 4 span;
+  text-align: center;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+.box {
+  display: grid;
+  grid-template-columns: 1fr;
+  text-align: center;
+}
+
+.value {
+  font-size: 64px;
+  font-weight: 700;
+}
+
+.name {
+  font-size: 16px;
+}
