@@ -1,29 +1,50 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfólio | Vitória Gabriela Melo</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,600;14..32,700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main class="portfolio">
+        <!-- Hero section (diferente do currículo) -->
+        <section class="hero">
+            <div class="hero-content">
+                <p class="hero-eyebrow">Olá, eu sou</p>
+                <h1 class="hero-name">Vitória Gabriela Melo</h1>
+                <p class="hero-description">
+                    Desenvolvedora backend e apaixonada por criar soluções úteis.<br>
+                    Aqui estão alguns dos projetos que desenvolvi ao longo da minha jornada.
+                </p>
+            </div>
+        </section>
 
-        <link rel="stylesheet" href="style.css">
+        <!-- Grid de projetos -->
+        <section class="projects">
+            <div class="container">
+                <div class="section-header">
+                    <h2>Projetos</h2>
+                    <div class="header-line"></div>
+                </div>
 
-        <title> Página Principal </title>
-    </head>
-    <body>
-        <div class="titulo">
-            Alguns Projetos
-        </div>
+                <div class="projects-grid">
+                    <a href="ProjetoCurriculo-EBAC/index.html" class="project-card">
+                        <div class="card-icon">📄</div>
+                        <h3>Currículo Web</h3>
+                        <p>Currículo responsivo com layout moderno, cards e design focado em usabilidade.</p>
+                        <span class="card-tag">HTML · CSS</span>
+                        <div class="card-arrow">→</div>
+                    </a>
 
-        <div class="bodyBox">
-            <div class="lista">
-                <div class="desafios">
-                    <a href="ProjetoCurriculo-EBAC/index.html"> ≫ Currículo </a>
                 </div>
             </div>
-        </div>
+        </section>
 
-        <footer class="rodape container">
-            <p class="rodapeDescricao"> Desenvolvido por Gabriela Melo &copy; 2022 </p>
+        <footer class="footer">
+            <p>Desenvolvido com 💙 por Vitória Gabriela Melo • 2025</p>
         </footer>
-    </body>
+    </main>
+</body>
 </html>
