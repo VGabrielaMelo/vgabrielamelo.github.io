@@ -1,0 +1,264 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f4f7fc;
+    color: #1e2a3e;
+    line-height: 1.5;
+    padding: 2rem 1rem;
+}
+
+.resume {
+    max-width: 900px;
+    margin: 0 auto;
+    background-color: white;
+    border-radius: 24px;
+    box-shadow: 0 20px 35px -12px rgba(0,0,0,0.1);
+    overflow: hidden;
+    padding: 2rem 2rem 2.5rem;
+}
+
+/* cabeçalho */
+.header {
+    text-align: center;
+    border-bottom: 3px solid #6c63ff;
+    padding-bottom: 1.5rem;
+    margin-bottom: 2rem;
+}
+
+.name {
+    font-size: 2.4rem;
+    font-weight: 700;
+    color: #0f172a;
+    letter-spacing: -0.5px;
+    margin-bottom: 0.3rem;
+}
+
+.profession {
+    font-size: 1.2rem;
+    color: #4b5563;
+    background: #eef2ff;
+    display: inline-block;
+    padding: 0.2rem 1rem;
+    border-radius: 40px;
+    font-weight: 500;
+}
+
+/* contato em linha */
+.contact-bar {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1.5rem;
+    background: #f8fafc;
+    padding: 1rem 1.5rem;
+    border-radius: 60px;
+    margin: 1.5rem 0 1rem;
+    font-size: 0.9rem;
+}
+
+.contact-item {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-item img {
+    width: 20px;
+    height: 20px;
+    object-fit: contain;
+}
+
+.contact-item a {
+    text-decoration: none;
+    color: #1e293b;
+    font-weight: 500;
+}
+
+.contact-item a:hover {
+    color: #6c63ff;
+    text-decoration: underline;
+}
+
+/* seções padrão */
+.section {
+    margin-top: 2rem;
+}
+
+.section-title {
+    font-size: 1.6rem;
+    font-weight: 600;
+    color: #0f172a;
+    border-left: 5px solid #6c63ff;
+    padding-left: 1rem;
+    margin-bottom: 1rem;
+}
+
+/* Cards padronizados para todas as seções */
+.about-text,
+.skills-wrapper,
+.timeline-item,
+.education-item {
+    background: #f9f9ff;
+    border-radius: 20px;
+    padding: 1.2rem;
+    transition: all 0.2s ease;
+}
+
+/* Apenas para as experiências, mantém o layout flex interno */
+.timeline-item {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-bottom: 1.2rem;
+    border-bottom: none; /* remove a linha antiga */
+    padding-bottom: 1.2rem;
+}
+
+/* Remove a margem extra do último item */
+.timeline-item:last-child,
+.education-item:last-child {
+    margin-bottom: 0;
+}
+
+.timeline-left {
+    flex: 0 0 220px;
+}
+
+.timeline-right {
+    flex: 1;
+}
+
+.timeline-title {
+    font-weight: 700;
+    font-size: 1.1rem;
+    color: #0c4a6e;
+}
+
+.timeline-sub {
+    font-weight: 600;
+    color: #1e293b;
+    margin-bottom: 0.3rem;
+}
+
+.timeline-date {
+    font-size: 0.8rem;
+    color: #5b6e8c;
+    margin-top: 0.2rem;
+}
+
+.timeline-desc {
+    color: #2d3a4b;
+    font-size: 0.95rem;
+}
+
+.badge {
+    display: inline-block;
+    background-color: #e6f0ff;
+    padding: 0.2rem 0.6rem;
+    border-radius: 12px;
+    font-size: 0.7rem;
+    font-weight: 500;
+    color: #1e40af;
+}
+
+/* Habilidades */
+.skills-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+.skills-col {
+    flex: 1;
+    min-width: 180px;
+}
+
+.skills-col ul {
+    list-style: none;
+    padding-left: 0.5rem;
+}
+
+.skills-col li {
+    margin-bottom: 0.4rem;
+    display: flex;
+    align-items: baseline;
+    gap: 0.3rem;
+}
+
+/* Formação e Cursos (cards) */
+.education-item {
+    margin-bottom: 1.2rem;
+}
+
+.education-item:hover,
+.timeline-item:hover {
+    background: #f1f5f9; /* leve escurecimento no hover */
+}
+
+.education-header {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: baseline;
+    margin-bottom: 0.3rem;
+}
+
+.edu-institution {
+    font-weight: 700;
+    font-size: 1rem;
+    color: #0c4a6e;
+}
+
+.edu-date {
+    font-size: 0.75rem;
+    color: #5b6e8c;
+    background: #e2e8f0;
+    padding: 0.2rem 0.6rem;
+    border-radius: 20px;
+}
+
+.edu-course {
+    font-weight: 500;
+    color: #1e293b;
+    font-size: 0.95rem;
+}
+
+/* Responsivo */
+@media (max-width: 680px) {
+    .resume {
+        padding: 1.5rem;
+    }
+    .timeline-left {
+        flex: 0 0 100%;
+    }
+    .contact-bar {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 0.7rem;
+        border-radius: 24px;
+    }
+    .name {
+        font-size: 1.8rem;
+    }
+    .education-header {
+        flex-direction: column;
+        gap: 0.3rem;
+    }
+}
+
+/* Ícones pequenos */
+.icons {
+    width: 18px;
+    vertical-align: middle;
+}
+.contact-item span {
+    margin-left: 4px;
+}
+hr {
+    margin: 1rem 0;
+}
