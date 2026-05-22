@@ -31,7 +31,7 @@ body {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #4a5568;          /* neutro - cinza escuro */
+    color: #4a5568;          
     font-weight: 600;
 }
 
@@ -47,7 +47,7 @@ body {
 
 .hero-description {
     font-size: 1.1rem;
-    color: #2d3748;          /* neutro - quase preto */
+    color: #2d3748;          
     max-width: 600px;
     margin: 1rem auto 0;
     line-height: 1.4;
