@@ -5,6 +5,7 @@
 }
 
 body {
+    min-height: 100vh;
     font-family: 'Inter', 'Segoe UI', sans-serif;
     background: linear-gradient(145deg, #f9f3ff 0%, #f0e6fa 100%);
     color: #2d1b3e;
@@ -25,18 +26,20 @@ body {
     backdrop-filter: blur(2px);
     border-radius: 48px;
     margin-bottom: 2.5rem;
+    /* Permite que o hero encolha/expanda com zoom */
+    width: 100%;
 }
 
 .hero-eyebrow {
     font-size: 0.9rem;
     text-transform: uppercase;
     letter-spacing: 3px;
-    color: #4a5568;          
+    color: #4a5568;
     font-weight: 600;
 }
 
 .hero-name {
-    font-size: 3rem;
+    font-size: clamp(2rem, 6vw, 3rem);  /* tamanho fluido: mínimo 2rem, máximo 3rem */
     font-weight: 700;
     background: linear-gradient(135deg, #9259CD, #B77BF3);
     background-clip: text;
@@ -46,8 +49,8 @@ body {
 }
 
 .hero-description {
-    font-size: 1.1rem;
-    color: #2d3748;          
+    font-size: clamp(1rem, 4vw, 1.1rem); /* fluido */
+    color: #2d3748;
     max-width: 600px;
     margin: 1rem auto 0;
     line-height: 1.4;
@@ -57,6 +60,7 @@ body {
 .container {
     max-width: 1100px;
     margin: 0 auto;
+    width: 100%;
 }
 
 .section-header {
@@ -65,15 +69,23 @@ body {
 }
 
 .section-header h2 {
-    font-size: 2rem;
+    font-size: clamp(1.5rem, 5vw, 2rem);
     font-weight: 600;
     color: #9259CD;
     display: inline-block;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(2px);
+    background: #ede4ff;
     padding: 0.5rem 1.8rem;
     border-radius: 60px;
     letter-spacing: -0.3px;
+    white-space: nowrap;        /* impede que o texto quebre em duas linhas */
+}
+
+@media (max-width: 500px) {
+    .section-header h2 {
+        white-space: normal;     /* permite quebra em telas muito pequenas */
+        padding: 0.4rem 1rem;
+        font-size: 1.3rem;
+    }
 }
 
 .header-line {
@@ -84,11 +96,11 @@ body {
     border-radius: 4px;
 }
 
-/* Grid de cards */
+/* Grid de cards - responsivo ao zoom */
 .projects-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
-    gap: 2rem;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 1.5rem;
 }
 
 .project-card {
@@ -102,6 +114,7 @@ body {
     box-shadow: 0 8px 20px rgba(0, 0, 0, 0.02);
     position: relative;
     display: block;
+    height: 100%;
 }
 
 .project-card:hover {
@@ -111,12 +124,12 @@ body {
 }
 
 .card-icon {
-    font-size: 2.2rem;
+    font-size: 2rem;
     margin-bottom: 0.8rem;
 }
 
 .project-card h3 {
-    font-size: 1.3rem;
+    font-size: 1.2rem;
     font-weight: 600;
     color: #A46AE0;
     margin-bottom: 0.5rem;
@@ -163,25 +176,23 @@ body {
     color: #A46AE0;
 }
 
-/* Responsivo */
+/* Responsivo para zoom e telas pequenas */
 @media (max-width: 700px) {
     .portfolio {
         padding: 1rem;
     }
-    .hero-name {
-        font-size: 2rem;
+    .hero {
+        padding: 1.5rem 0.8rem 2rem;
+        border-radius: 32px;
     }
-    .hero-description {
-        font-size: 1rem;
+    .hero-name {
+        font-size: clamp(1.8rem, 5vw, 2.2rem);
     }
     .projects-grid {
+        grid-template-columns: 1fr;
         gap: 1rem;
     }
     .project-card {
         padding: 1.2rem;
-    }
-    .section-header h2 {
-        font-size: 1.5rem;
-        padding: 0.4rem 1.2rem;
     }
 }
