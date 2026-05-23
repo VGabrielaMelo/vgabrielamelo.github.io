@@ -122,5 +122,32 @@ Acesse o Habits Control online:
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
+### Jogo da Forca - ONE
+
+Jogo da Forca desenvolvido durante o curso da **Oracle Next Education (ONE)**. O projeto foi completamente modernizado com novas funcionalidades, design aprimorado e persistência de dados.
+
+**O que foi implementado além do projeto original:**
+
+- **Teclado virtual** interativo com efeitos hover e desabilitação de letras já utilizadas
+- **Banco de palavras expansível** - usuário pode adicionar novas palavras (3 a 15 caracteres)
+- **Persistência local (localStorage)** - palavras adicionadas ficam salvas no navegador
+- **Lista de palavras cadastradas** - modal exibe todas as palavras disponíveis com contagem
+- **Restauração de palavras originais** - botão para resetar o banco de palavras
+- **Totalmente responsivo** - funciona em qualquer dispositivo (desktop, tablet, celular)
+- **Modal de mensagens** - feedback visual para vitória, derrota e ações do usuário
+- **Suporte a palavras de até 15 caracteres** - layout adaptado para palavras longas
+
+#### 🔗 Projeto Final
+
+Acesse o Jogo da Forca online:  
+👉 [https://vgabrielamelo.github.io/ProjetoJogodaForca-ONE](https://vgabrielamelo.github.io/ProjetoJogodaForca-ONE)
+
+#### 💻 Feito com
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+[![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/)
+
 ---
 <p align="center">Feito por <a href="https://github.com/VGabrielaMelo"> Gabriela Melo</a></p>
