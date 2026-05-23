@@ -1,32 +1,134 @@
 <!DOCTYPE html>
-<html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Halloween 2024</title>
-        <link rel="stylesheet" href="style.css" />
-    </head>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contagem Regressiva | Múltiplos Eventos</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+</head>
+<body>
+    <main class="container">
+        <div class="main-card">
+            <div class="header">
+                <div class="icon-wrapper">
+                    <i class="fas fa-calendar-alt"></i>
+                </div>
+                <h1>Contagem Regressiva</h1>
+                <p class="subtitle">Acompanhe seus eventos especiais</p>
+            </div>
 
-    <body>
-        <div class="countdown">
-            <span class="title">Evento de Halloween</span>
-            <div class="box">
-                <span class="value" data-days>00</span>
-                <span class="name">days</span>
+            <!-- Formulário para adicionar novo evento -->
+            <div class="add-event-section">
+                <h3><i class="fas fa-plus-circle"></i> Adicionar novo evento</h3>
+                <div class="add-event-form">
+                    <input type="text" id="event-name" placeholder="Nome do evento (ex: Natal)" maxlength="30">
+                    <input type="date" id="event-date">
+                    <button id="add-event-btn">
+                        <i class="fas fa-plus"></i> Adicionar
+                    </button>
+                </div>
             </div>
-            <div class="box">
-                <span class="value" data-hours>00</span>
-                <span class="name">hours</span>
-            </div>
-            <div class="box">
-                <span class="value" data-minutes>00</span>
-                <span class="name">minutes</span>
-            </div>
-            <div class="box">
-                <span class="value" data-seconds>00</span>
-                <span class="name">seconds</span>
+
+            <!-- Container dos eventos -->
+            <div id="events-container" class="events-container">
+                <!-- Eventos pré-definidos -->
+                <div class="event-card" data-event-id="halloween">
+                    <div class="event-header">
+                        <h2> Halloween</h2>
+                        <button class="remove-event" data-event="halloween">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                    <div class="countdown-grid">
+                        <div class="time-box">
+                            <span class="time-value" data-days="halloween">00</span>
+                            <span class="time-label">Dias</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" data-hours="halloween">00</span>
+                            <span class="time-label">Horas</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" data-minutes="halloween">00</span>
+                            <span class="time-label">Minutos</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" data-seconds="halloween">00</span>
+                            <span class="time-label">Segundos</span>
+                        </div>
+                    </div>
+                    <div class="event-message" data-message="halloween">
+                        <i class="fas fa-candy-corn"></i>
+                        <span>O Halloween está chegando!</span>
+                    </div>
+                </div>
+
+                <div class="event-card" data-event-id="natal">
+                    <div class="event-header">
+                        <h2> Natal</h2>
+                        <button class="remove-event" data-event="natal">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                    <div class="countdown-grid">
+                        <div class="time-box">
+                            <span class="time-value" data-days="natal">00</span>
+                            <span class="time-label">Dias</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" data-hours="natal">00</span>
+                            <span class="time-label">Horas</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" data-minutes="natal">00</span>
+                            <span class="time-label">Minutos</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" data-seconds="natal">00</span>
+                            <span class="time-label">Segundos</span>
+                        </div>
+                    </div>
+                    <div class="event-message" data-message="natal">
+                        <i class="fas fa-star"></i>
+                        <span>O Natal está chegando!</span>
+                    </div>
+                </div>
+
+                <div class="event-card" data-event-id="ano-novo">
+                    <div class="event-header">
+                        <h2> Ano Novo</h2>
+                        <button class="remove-event" data-event="ano-novo">
+                            <i class="fas fa-trash-alt"></i>
+                        </button>
+                    </div>
+                    <div class="countdown-grid">
+                        <div class="time-box">
+                            <span class="time-value" data-days="ano-novo">00</span>
+                            <span class="time-label">Dias</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" data-hours="ano-novo">00</span>
+                            <span class="time-label">Horas</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" data-minutes="ano-novo">00</span>
+                            <span class="time-label">Minutos</span>
+                        </div>
+                        <div class="time-box">
+                            <span class="time-value" data-seconds="ano-novo">00</span>
+                            <span class="time-label">Segundos</span>
+                        </div>
+                    </div>
+                    <div class="event-message" data-message="ano-novo">
+                        <i class="fas fa-sparkle"></i>
+                        <span>O Ano Novo está chegando!</span>
+                    </div>
+                </div>
             </div>
         </div>
-        <script src="app.js" defer></script>
-    </body>
+    </main>
+    <script src="app.js" defer></script>
+</body>
 </html>
