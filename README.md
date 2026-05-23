@@ -5,6 +5,7 @@ Bem-vindo(a) ao meu espaço no GitHub Pages. Aqui você encontra os projetos que
 ## 📑 Índice
 
 - [Currículo Web - EBAC](#currículo-web---ebac)
+- [Habits Control - Rocket](#habits-control---rocket)
 
 ---
 ### Meu Currículo Web
@@ -35,7 +36,32 @@ Acesse o currículo online:
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
-[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript) 
+
+### Habits Control - Rocket
+
+Aplicação web para controle de hábitos diários, desenvolvida durante o **NLW Setup da Rocketseat**. O projeto permite que o usuário marque hábitos concluídos e acompanhe seu progresso, com persistência local dos dados (LocalStorage).
+
+**Principais características:**
+- Interface limpa e intuitiva
+- Marcação de hábitos por dia da semana
+- Persistência dos dados no navegador
+- Design responsivo (funciona em mobile e desktop)
+
+**Funcionalidades:**
+- Adicionar/remover hábitos
+- Marcar hábitos como concluídos
+- Visualização semanal do progresso
+
+#### 🔗 Projeto Final
+
+Acesse o Habits Control online:  
+👉 [https://vgabrielamelo.github.io/ProjetoHabitsControl-Rocket](https://vgabrielamelo.github.io/ProjetoHabitsControl-Rocket)
+
+#### 💻 Feito com
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 ---
 <p align="center">Feito por <a href="https://github.com/VGabrielaMelo"> Gabriela Melo</a></p>
