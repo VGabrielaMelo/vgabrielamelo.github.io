@@ -5,7 +5,10 @@ Bem-vindo(a) ao meu espaço no GitHub Pages. Aqui você encontra os projetos que
 ## 📑 Índice
 
 - [Currículo Web - EBAC](#currículo-web---ebac)
+- [Contagem Regressiva Multi-Eventos](#contagem-regressiva-multi-eventos)
+- [Calculadora CLT → PJ](#calculadora-clt--pJ)
 - [Habits Control - Rocket](#habits-control---rocket)
+
 
 ---
 ### Meu Currículo Web
@@ -36,6 +39,62 @@ Acesse o currículo online:
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+
+### Contagem Regressiva Multi-Eventos
+
+Aplicação web que permite acompanhar a contagem regressiva para **múltiplos eventos simultaneamente**. O usuário pode visualizar eventos pré-definidos (Halloween, Natal, Ano Novo) e adicionar seus próprios eventos personalizados, com persistência local no navegador.
+
+**Principais características:**
+- Interface moderna com cards individuais para cada evento
+- Suporte a eventos pré-definidos e personalizados
+- Persistência local (localStorage) – eventos salvos mesmo após fechar o navegador
+- Mensagens dinâmicas que mudam conforme a data se aproxima
+- Design responsivo e gradiente roxo/lilás (padrão do portfólio)
+
+**Funcionalidades:**
+- Contagem regressiva em dias, horas, minutos e segundos
+- Adicionar eventos personalizados com nome e data
+- Remover eventos personalizados
+- Mensagens de aproximação (ex: "A reta final chegou!")
+
+#### 🔗 Projeto Final
+
+Acesse a contagem regressiva online:  
+👉 [https://vgabrielamelo.github.io/ProjetoContagemRegressiva](https://vgabrielamelo.github.io/ProjetoContagemRegressiva)
+
+#### 💻 Feito com
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+
+### Calculadora CLT → PJ
+
+Ferramenta web que ajuda profissionais CLT a calcular o valor ideal da hora de trabalho ao migrar para o regime PJ.  
+A calculadora considera despesas fixas mensais, investimento em equipamento (diluído em 12 meses) e garante 50% de lucro sobre o total.
+
+**Principais características:**
+- Interface moderna e responsiva (cards, gradiente roxo/lilás)
+- Campos com descrições explicativas para facilitar o uso
+- Cálculo automático do valor da hora e da receita bruta mensal
+- Design consistente com o restante do portfólio
+
+**Funcionalidades:**
+- Calcular hora ideal baseada em horas/dia e dias/mês
+- Incluir despesas fixas mensais (aluguel, alimentação, contas)
+- Diluir custo de equipamento em 12 meses
+- Exibir receita bruta estimada no mês
+
+#### 🔗 Projeto Final
+
+Acesse a calculadora online:  
+👉 [https://vgabrielamelo.github.io/ProjetoCalculadoraJava-EBAC](https://vgabrielamelo.github.io/ProjetoCalculadoraJava-EBAC)
+
+#### 💻 Feito com
+
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
+[![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+[![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 
 ### Habits Control - Rocket
 
