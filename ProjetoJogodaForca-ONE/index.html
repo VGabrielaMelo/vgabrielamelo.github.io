@@ -1,112 +1,114 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-        <script type="text/javascript" src="./js/script.js" defer></script>
-        <script type="text/javascript" src="./js/boneco.js" defer></script>
-
-        <!-- <link rel="stylesheet" href="./css/reset.css"> -->
-        <link rel="stylesheet" href="./css/style.css">
-        <link rel="icon" href="img/logo_alura.png">
-        <link href="https://fonts.googleapis.com/css2?family=Inter&display=swap" rel="stylesheet">
-
-        <title> Jogo da Forca - ONE </title>
-    </head>
-
-    <body>
-        <header class="header" id="header">
-            <a href="https://www.aluracursos.com/" target="_blank"><img src="img/logo_alura.png" alt="logo alura" class="logo"></a>
-        </header>
-
-        <main>
-            <!-- Menu inicial do jogo -->
-            <section class="section" id="inicio">
-                <div class="container">
-                    <div class="conteCentrado">
-                        <input class="botaoUniversal" id="btnIniciarJogo" type="submit" value="Iniciar Novo Jogo">
-                        <input class="botaoUniversal" id="btnAddPalavra" type="submit" value="Adicionar Nova Palavra">
-                    </div>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jogo da Forca | ONE</title>
+    <link rel="stylesheet" href="./style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,300;14..32,400;14..32,500;14..32,600;14..32,700;14..32,800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="icon" href="img/logo_alura.png">
+</head>
+<body>
+    <main class="container">
+        <!-- Menu inicial -->
+        <div class="game-card" id="inicio">
+            <div class="header">
+                <div class="icon-wrapper">
+                    <i class="fas fa-gamepad"></i>
                 </div>
-            </section>
+                <h1>Jogo da Forca</h1>
+                <p class="subtitle">Teste seus conhecimentos e adivinhe as palavras!</p>
+            </div>
 
-            <!-- Jogo da Forca -->
-            <section class="ocultarSection" id="jogo">
-                <div class="container">
-                    <canvas width="350" height="360"></canvas>
-                    <div id="contPalavraSecreta"></div>
-                    <div id="contLetrasUsadas"></div>
+            <div class="menu-buttons">
+                <button class="btn-primary" id="btnIniciarJogo">
+                    <i class="fas fa-play"></i> Iniciar Novo Jogo
+                </button>
+                <button class="btn-secondary" id="btnAddPalavra">
+                    <i class="fas fa-plus"></i> Adicionar Nova Palavra
+                </button>
+                <button class="btn-secondary" id="btnVerPalavras">
+                    <i class="fas fa-list"></i> Ver Palavras Cadastradas
+                </button>
+            </div>
+        </div>
+
+        <!-- Tela do Jogo -->
+        <div class="game-card ocultarSection" id="jogo">
+            <div class="game-header">
+                <button class="btn-back" id="btnDesistirGame">
+                    <i class="fas fa-arrow-left"></i> Sair
+                </button>
+                <h2><i class="fas fa-skull"></i> Jogo da Forca</h2>
+                <button class="btn-reset" id="btnNovoJogoGame">
+                    <i class="fas fa-sync-alt"></i> Novo Jogo
+                </button>
+            </div>
+
+            <div class="game-area">
+                <div class="canvas-area">
+                    <canvas id="canvas-forca" width="350" height="360"></canvas>
                 </div>
-            </section>
-
-            <!-- Add Novas Palavras Secretas -->
-            <section class="ocultarSection" id="vistapalavra">
-                <div class="container">
-                    <div class="conteCentrado">
-                        <input id="palavra" placeholder="Escreva aqui" maxlength="8" onkeypress="return condicionpalavra(event);" onkeyup="converterMaiuscula(this);" type="text">
-                        <img src="img/alerta.png" alt="símbolo de alerta"> Máximo 8 e mínimo 3 caracteres (sem acentos). </img>
-                        <input class="botaoUniversal" id="btnAdd" type="submit" value="Adicionar">
-                        <button class="botaoUniversal" id="btnVoltar"> Voltar </button>
-                    </div>
-                </div>
-            </section>
-
-            <!-- Janela Flutuante -->
-            <div class="ocultarSection" id="mensagemJogo">
-                <div id="containerJanelaFlutuante"></div>
-                <div id="BtnJanelaFlutuante">
-                    <button id="btnAceitar" class="botaoUniversal"> Aceitar </button>
+                <div class="word-area">
+                    <div id="contPalavraSecreta" class="word-display"></div>
+                    <div id="contLetrasUsadas" class="used-letters"></div>
                 </div>
             </div>
-        </main>
 
-        <!-- Teclado -->
-        <section class="ocultarSection" id="vistaTeclado">
-                <div class="conteCentrado" id="teclado">
-                    <button id="letraA" class="tecla" onclick="teclaPessionada('A'); contErros('A'); contAcertos('A');"> A </button>
-                    <button id="letraB" class="tecla" onclick="teclaPessionada('B'); contErros('B'); contAcertos('B');"> B </button>
-                    <button id="letraC" class="tecla" onclick="teclaPessionada('C'); contErros('C'); contAcertos('C');"> C </button>
-                    <button id="letraD" class="tecla" onclick="teclaPessionada('D'); contErros('D'); contAcertos('D');"> D </button>
-                    <button id="letraE" class="tecla" onclick="teclaPessionada('E'); contErros('E'); contAcertos('E');"> E </button>
-                    <button id="letraF" class="tecla" onclick="teclaPessionada('F'); contErros('F'); contAcertos('F');"> F </button>
-                    <button id="letraG" class="tecla" onclick="teclaPessionada('G'); contErros('G'); contAcertos('G');"> G </button>
-                    <button id="letraH" class="tecla" onclick="teclaPessionada('H'); contErros('H'); contAcertos('H');"> H </button>
-                    <button id="letraI" class="tecla" onclick="teclaPessionada('I'); contErros('I'); contAcertos('I');"> I </button>
-                    <button id="letraJ" class="tecla" onclick="teclaPessionada('J'); contErros('J'); contAcertos('J');"> J </button>
-                    <button id="letraK" class="tecla" onclick="teclaPessionada('K'); contErros('K'); contAcertos('K');"> K </button>
-                    <button id="letraL" class="tecla" onclick="teclaPessionada('L'); contErros('L'); contAcertos('L');"> L </button>
-                    <button id="letraM" class="tecla" onclick="teclaPessionada('M'); contErros('M'); contAcertos('M');"> M </button>
-                    <button id="letraN" class="tecla" onclick="teclaPessionada('N'); contErros('N'); contAcertos('N');"> N </button>
-                    <button id="letraO" class="tecla" onclick="teclaPessionada('O'); contErros('O'); contAcertos('O');"> O </button>
-                    <button id="letraP" class="tecla" onclick="teclaPessionada('P'); contErros('P'); contAcertos('P');"> P </button>
-                    <button id="letraQ" class="tecla" onclick="teclaPessionada('Q'); contErros('Q'); contAcertos('Q');"> Q </button>
-                    <button id="letraR" class="tecla" onclick="teclaPessionada('R'); contErros('R'); contAcertos('R');"> R </button>
-                    <button id="letraS" class="tecla" onclick="teclaPessionada('S'); contErros('S'); contAcertos('S');"> S </button>
-                    <button id="letraT" class="tecla" onclick="teclaPessionada('T'); contErros('T'); contAcertos('T');"> T </button>
-                    <button id="letraU" class="tecla" onclick="teclaPessionada('U'); contErros('U'); contAcertos('U');"> U </button>
-                    <button id="letraV" class="tecla" onclick="teclaPessionada('V'); contErros('V'); contAcertos('V');"> V </button>
-                    <button id="letraW" class="tecla" onclick="teclaPessionada('W'); contErros('W'); contAcertos('W');"> W </button>
-                    <button id="letraX" class="tecla" onclick="teclaPessionada('X'); contErros('X'); contAcertos('X');"> X </button>
-                    <button id="letraY" class="tecla" onclick="teclaPessionada('Y'); contErros('Y'); contAcertos('Y');"> Y </button>
-                    <button id="letraZ" class="tecla" onclick="teclaPessionada('Z'); contErros('Z'); contAcertos('Z');"> Z </button>
-                </div>
-                <div class="containerBtnMenor">
-                    <button id="btnNovoJogo" class="botaoUniversal btnMenor"> Novo Jogo </button>
-                    <button id="btnDesistir" class="botaoUniversal btnMenor"> Desistir </button>
-                </div>
-        </section>
+            <!-- Teclado -->
+            <div class="keyboard">
+                <div class="keyboard-grid"></div>
+            </div>
+        </div>
 
-        <!-- Rodape -->
-        <footer class="footer" id="footer">
-            <div>
-                <a href="https://www.linkedin.com/in/vgabrielamelo/" target="_blank"><img src="img/linkedIn.png" alt="logo linkedin" class="logo"></a>
-                <a href="https://github.com/VGabrielaMelo" target="_blank"><img src="img/github.png" alt="logo github" class="logo"></a>
+        <!-- Adicionar Palavra -->
+        <div class="game-card ocultarSection" id="vistapalavra">
+            <div class="header">
+                <div class="icon-wrapper">
+                    <i class="fas fa-plus-circle"></i>
+                </div>
+                <h2>Adicionar Nova Palavra</h2>
+                <p class="subtitle">Máximo 15 e mínimo 3 caracteres (sem acentos)</p>
             </div>
-            <div id="copyright">
-                <p> Copyright &copy Gabriela Melo - 2022 </p>
+
+            <div class="add-word-area">
+                <input type="text" id="palavra" placeholder="Digite a palavra aqui" maxlength="15" autocomplete="off">
+                <div class="add-buttons">
+                    <button class="btn-primary" id="btnAdd">
+                        <i class="fas fa-save"></i> Adicionar
+                    </button>
+                    <button class="btn-secondary" id="btnVoltar">
+                        <i class="fas fa-arrow-left"></i> Voltar
+                    </button>
+                </div>
             </div>
-        </footer>
-    </body>
+        </div>
+
+        <!-- Modal de Mensagem do Jogo -->
+        <div class="modal ocultarSection" id="mensagemJogo">
+            <div class="modal-content">
+                <div class="modal-icon">
+                    <i class="fas fa-info-circle"></i>
+                </div>
+                <p id="containerJanelaFlutuante">Mensagem</p>
+                <button class="btn-primary" id="btnAceitar">Ok</button>
+            </div>
+        </div>
+
+        <!-- Modal de Palavras Cadastradas -->
+        <div class="modal ocultarSection" id="modalPalavras">
+            <div class="modal-content modal-palavras">
+                <div class="modal-icon">
+                    <i class="fas fa-book"></i>
+                </div>
+                <h3>📚 Palavras Cadastradas</h3>
+                <div id="listaPalavras" class="lista-palavras"></div>
+                <button class="btn-primary" id="btnFecharPalavras">Fechar</button>
+            </div>
+        </div>
+    </main>
+
+    <script src="./script.js" defer></script>
+</body>
 </html>

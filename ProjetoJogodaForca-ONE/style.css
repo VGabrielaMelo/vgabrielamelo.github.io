@@ -1,0 +1,505 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(145deg, #f9f3ff 0%, #f0e6fa 100%);
+    color: #2d1b3e;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+.container {
+    width: 100%;
+    max-width: 950px;
+    margin: 0 auto;
+}
+
+/* Card principal */
+.game-card {
+    background: white;
+    border-radius: 48px;
+    padding: 2rem;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.icon-wrapper {
+    background: linear-gradient(135deg, #9259CD, #B77BF3);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.icon-wrapper i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+h1, h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #9259CD, #B77BF3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #5a3a7a;
+    font-size: 0.9rem;
+}
+
+/* Botões */
+.menu-buttons {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+}
+
+.btn-primary, .btn-secondary {
+    width: 280px;
+    padding: 1rem;
+    border-radius: 40px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    border: none;
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #9259CD, #B77BF3);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(146, 89, 205, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #9259CD;
+    border: 2px solid #9259CD;
+}
+
+.btn-secondary:hover {
+    background: #f3e8ff;
+    transform: translateY(-2px);
+}
+
+/* Game header */
+.game-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 2rem;
+    padding-bottom: 1rem;
+    border-bottom: 2px solid #f0e6fa;
+}
+
+.game-header h2 {
+    font-size: 1.3rem;
+    margin: 0;
+}
+
+.btn-back, .btn-reset {
+    background: none;
+    border: none;
+    cursor: pointer;
+    font-size: 0.9rem;
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    transition: all 0.2s ease;
+}
+
+.btn-back {
+    color: #5a3a7a;
+}
+
+.btn-back:hover {
+    background: #f3e8ff;
+    color: #9259CD;
+}
+
+.btn-reset {
+    color: #9259CD;
+}
+
+.btn-reset:hover {
+    background: #f3e8ff;
+}
+
+/* Área do jogo */
+.game-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
+    margin-bottom: 2rem;
+}
+
+.canvas-area canvas {
+    background: #f9f3ff;
+    border-radius: 24px;
+    width: 100%;
+    height: auto;
+}
+
+.word-area {
+    flex: 1;
+    min-width: 200px;
+}
+
+/* ==================== DISPLAY DA PALAVRA (SUPORTE A 15 LETRAS) ==================== */
+.word-display {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+    max-width: 100%;
+    padding: 0.5rem;
+}
+
+.word-display div {
+    width: 42px;
+    height: 52px;
+    border-bottom: 3px solid #9259CD;
+    text-align: center;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #2d1b3e;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Responsivo para palavras de até 15 caracteres */
+@media (max-width: 850px) {
+    .word-display div {
+        width: 36px;
+        height: 46px;
+        font-size: 1.4rem;
+    }
+    .word-display {
+        gap: 0.4rem;
+    }
+}
+
+@media (max-width: 700px) {
+    .word-display div {
+        width: 32px;
+        height: 42px;
+        font-size: 1.2rem;
+    }
+    .game-area {
+        gap: 1.5rem;
+    }
+}
+
+@media (max-width: 580px) {
+    .word-display div {
+        width: 28px;
+        height: 38px;
+        font-size: 1rem;
+    }
+    .word-display {
+        gap: 0.35rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .word-display div {
+        width: 24px;
+        height: 34px;
+        font-size: 0.85rem;
+        border-bottom-width: 2px;
+    }
+    .word-display {
+        gap: 0.3rem;
+    }
+}
+
+@media (max-width: 400px) {
+    .word-display div {
+        width: 20px;
+        height: 30px;
+        font-size: 0.75rem;
+    }
+    .word-display {
+        gap: 0.25rem;
+    }
+}
+
+/* Letras usadas */
+.used-letters {
+    text-align: center;
+    color: #5a3a7a;
+    font-size: 0.9rem;
+    padding: 1rem;
+    background: #f9f3ff;
+    border-radius: 24px;
+    word-break: break-word;
+}
+
+/* Teclado */
+.keyboard {
+    margin-top: 1.5rem;
+}
+
+.keyboard-grid {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 0.5rem;
+}
+
+.key {
+    background: #f3e8ff;
+    border: none;
+    padding: 0.8rem 0.5rem;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #9259CD;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    font-family: inherit;
+}
+
+.key:hover:not(:disabled) {
+    background: linear-gradient(135deg, #9259CD, #B77BF3);
+    color: white;
+    transform: scale(1.05);
+}
+
+.key:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+    background: #e2e8f0;
+    color: #94a3b8;
+}
+
+/* Adicionar palavra */
+.add-word-area {
+    text-align: center;
+}
+
+.add-word-area input {
+    width: 100%;
+    padding: 1rem;
+    font-size: 1.2rem;
+    text-align: center;
+    border: 2px solid #ede4ff;
+    border-radius: 24px;
+    font-family: inherit;
+    margin-bottom: 1rem;
+}
+
+.add-word-area input:focus {
+    outline: none;
+    border-color: #9259CD;
+}
+
+.add-buttons {
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Modal padrão */
+.modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    border-radius: 32px;
+    padding: 2rem;
+    text-align: center;
+    max-width: 350px;
+    width: 90%;
+}
+
+.modal-icon {
+    background: linear-gradient(135deg, #9259CD, #B77BF3);
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.modal-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.modal-content p {
+    margin-bottom: 1.5rem;
+    color: #2d1b3e;
+}
+
+/* Modal de palavras */
+.modal-palavras {
+    max-width: 550px;
+    width: 90%;
+    max-height: 80vh;
+    overflow-y: auto;
+}
+
+.modal-palavras h3 {
+    margin-bottom: 1rem;
+    color: #9259CD;
+}
+
+.lista-palavras {
+    max-height: 400px;
+    overflow-y: auto;
+    margin: 1rem 0;
+    padding: 1rem;
+    background: #f9f3ff;
+    border-radius: 24px;
+    text-align: center;
+}
+
+.lista-palavras .palavra-item {
+    display: inline-block;
+    background: white;
+    padding: 0.5rem 1rem;
+    margin: 0.4rem;
+    border-radius: 40px;
+    font-weight: 600;
+    color: #9259CD;
+    border: 1px solid #ede4ff;
+    transition: all 0.2s ease;
+    font-size: 0.85rem;
+    word-break: keep-all;
+}
+
+.lista-palavras .palavra-item:hover {
+    background: #ede4ff;
+    transform: scale(1.02);
+}
+
+.lista-palavras .categoria {
+    font-weight: 700;
+    color: #2d1b3e;
+    margin: 0.5rem 0;
+    padding: 0.5rem;
+    background: #ede4ff;
+    border-radius: 40px;
+    text-align: center;
+}
+
+.lista-palavras hr {
+    margin: 0.8rem 0;
+    border: none;
+    height: 1px;
+    background: #ede4ff;
+}
+
+/* Responsivo do teclado */
+@media (max-width: 700px) {
+    .game-card {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.5rem;
+    }
+    
+    .keyboard-grid {
+        grid-template-columns: repeat(5, 1fr);
+        gap: 0.4rem;
+    }
+    
+    .game-header {
+        flex-wrap: wrap;
+        gap: 0.5rem;
+        justify-content: center;
+    }
+    
+    .btn-back, .btn-reset {
+        padding: 0.4rem 0.8rem;
+        font-size: 0.8rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .keyboard-grid {
+        grid-template-columns: repeat(4, 1fr);
+        gap: 0.3rem;
+    }
+    
+    .key {
+        padding: 0.5rem 0.3rem;
+        font-size: 0.85rem;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+        padding: 0.8rem;
+    }
+    
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .icon-wrapper i {
+        font-size: 1.8rem;
+    }
+}
+
+/* Utilitários */
+.ocultarSection {
+    display: none;
+}
+
+.verLetra {
+    color: #2d1b3e;
+}
+
+.ocultarLetra {
+    color: transparent;
+}
