@@ -335,7 +335,13 @@ const reiniciarJogo = () => iniciarJogo();
 
 const sairJogo = () => {
     elementos.telaJogo.classList.add("ocultarSection");
+    if (elementos.telaAddPalavra) {
+        elementos.telaAddPalavra.classList.add("ocultarSection");
+    }
     elementos.telaInicio.classList.remove("ocultarSection");
+    if (elementos.inputPalavra) {
+        elementos.inputPalavra.value = "";
+    }
     desabilitarTeclado(false);
 };
 
@@ -463,16 +469,6 @@ const mostrarMensagem = (texto) => {
 
 const fecharModal = () => {
     elementos.modal.classList.add("ocultarSection");
-    if (elementos.modal.dataset.gameEnded === "true") {
-        elementos.modal.dataset.gameEnded = "false";
-        setTimeout(() => {
-            if (confirm("Deseja iniciar um novo jogo?")) {
-                iniciarJogo();
-            } else {
-                sairJogo();
-            }
-        }, 100);
-    }
 };
 
 // ==================== EVENTOS ====================
