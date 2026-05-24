@@ -1,204 +1,326 @@
-/* Geral para toda a página */
 * {
-    font-family: 'Inter', sans-serif;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-weight: 400px;
-    font-size: 32px;
-    line-height: 150%;
 }
 
 body {
-    background: #cda2f9;
-}
-
-/* Logo */
-header {
-    margin-top: 0.8rem;
-}
-
-main {
+    font-family: 'Inter', 'Segoe UI', sans-serif;
+    background: linear-gradient(145deg, #f9f3ff 0%, #f0e6fa 100%);
+    color: #2d1b3e;
+    min-height: 100vh;
     display: flex;
-    height: 100vh;
-    margin-left: 80px;
-    /* margin-bottom: 50px; */
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
 }
 
-/* Área para enviar o texto */
-.input-conteiner {
-    margin-left: 3rem;
-    width: 22rem;
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
 
+/* Card principal */
+.card {
+    background: white;
+    border-radius: 48px;
+    padding: 2rem;
+    box-shadow: 0 25px 45px -12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.icon-wrapper {
+    background: linear-gradient(135deg, #9259CD, #B77BF3);
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.icon-wrapper i {
+    font-size: 2.5rem;
+    color: white;
+}
+
+h1 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    background: linear-gradient(135deg, #9259CD, #B77BF3);
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+    margin-bottom: 0.5rem;
+}
+
+.subtitle {
+    color: #5a3a7a;
+    font-size: 0.9rem;
+}
+
+/* Área principal - duas colunas */
+.codificador-area {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+}
+
+/* Coluna esquerda - Input */
+.input-area {
+    flex: 1;
+    min-width: 280px;
     display: flex;
     flex-direction: column;
+    gap: 1rem;
 }
 
 .input-texto {
-    /* width: 766px;
-    height: 493px; */
-
-    margin-top: 10px;
-    margin-right: 30px;
-    border-radius: 10px;
-    border: none;
-    background: #cda2f9;
-
-    font-size: 0.8rem;
-
+    width: 100%;
+    height: 300px;
+    padding: 1rem;
+    font-size: 1rem;
+    font-family: 'Inter', monospace;
+    border: 2px solid #ede4ff;
+    border-radius: 24px;
+    background: #fefefe;
     resize: none;
+    transition: all 0.2s ease;
 }
 
 .input-texto:focus {
     outline: none;
+    border-color: #9259CD;
+    box-shadow: 0 0 0 3px rgba(146, 89, 205, 0.1);
 }
 
 .input-texto::placeholder {
-    color: #723b82;
+    color: #cbd5e1;
 }
 
-/* Atenção */
-.informacao {
-    font-size: 15px;
+/* Mensagem de informação */
+.info-message {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.75rem;
+    color: #a855f7;
+    background: #f3e8ff;
+    padding: 0.5rem 1rem;
+    border-radius: 40px;
+    width: fit-content;
 }
 
-/* Botões (área enviar texto) */
-.botoes button {
-    height: 2rem;
-    width: 250px;
-    background: #0A3871;
+.info-message i {
+    font-size: 0.8rem;
+}
+
+/* Grupo de botões */
+.button-group {
+    display: flex;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+.btn-primary, .btn-secondary {
+    flex: 1;
+    padding: 0.9rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
     cursor: pointer;
-}
-
-.botoes {
-    display: flex;
-    gap: 30px; /* espaço entre itens -> precisa do flex */
-    margin-top: 1rem;
-}
-
-main .mensagem-enviar .botoes .encriptar {
-    font-size: 0.6rem;
-    /* margin-top: 15px;
-    margin-right: 30px; */
-    background: #9a57bc;
-    color: black;
-    border-radius: 30px;
-    border-color: #6b3764;
-} 
-
-main .mensagem-enviar .botoes .desencriptar {
-    font-size: 0.6rem;
-    /* margin-top: 15px;
-    margin-left: 30px; */
-    background: #dec2ff;
-    color: black;
-    border-radius: 30px;
-    border-color: #6b3764;
-}
-
-/* Área do resultado do texto */
-main .result-conteiner {
-    background-color: #F6f6f6;
-    width: 12rem;
-    height: 100vh;
-    margin-block: 20px;
-   
-    border-radius: 32px;
-    border: 1px solid #FFFFFF;
-
+    transition: all 0.2s ease;
+    display: inline-flex;
+    align-items: center;
     justify-content: center;
-}
-
-main .result-conteudo strong{
-    font-size: 0.6rem;
-}
-
-main .result-conteudo p {
-    margin-top: 0.6rem;
-    font-size: 0.5rem;
-}
-
-main .result-conteudo {
-    text-align: center;
-    /* justify-content: center; */
-    display: flex;
-    flex-direction: column;
-    /* align-items: center; */
-    margin-top: 0.5rem;
-}
-
-main .result-texto .mensagem img {
-    width: 10rem;
-    padding: 1rem;
-}
-
-main .result-texto {
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    height: 100vh;
-    width: 100%;
-}
-
-main .result-texto .mensagem {
-    justify-content: center;
-    text-align: center;
-    
-    /* position: fixed; */
-    /* height: 100vw;
-    width: 356px; */
-    /* flex-direction: column; */
-
-    /* margin-top: 10px;
-    margin-left: 30px;
-    border-radius: 32px;
-    border: 1px solid #FFFFFF; */
-    
-    /* background-image: url("./Imagens/Boneco.png");
-    background-repeat: no-repeat;
-    background-position: 18px;
-    background-size: 300px;
-
-    resize: none; */
-}
-
-/* Botão (Área resultado do texto) */
-button.copiar {
-    height: 1.5rem;
-    width: 200px;
-    margin: 0 auto;
-    margin-top: 0.8rem;
-    background: #F6f6f6
-}
-
-.copiar {
-    /* position: relative; */
-    /* margin-top: 30px;
-    margin-left: 150px; */
-    font-size: 0.6rem;
-    border-radius: 30px;
-    color: #6b3764;
-    border-color: #6b3764;
-
-
-}
-
-#encriptado {
-    resize: none;
-    display: none;
+    gap: 0.5rem;
     border: none;
-
-    height: 15rem;
-
-    margin: 0 0.5rem;
-
-    text-align: center;
-
-    font-size: 20px;
-    background-color: #F6f6f6;
-    color: #0A3871;
+    font-family: inherit;
 }
 
-#encriptado:focus{
+.btn-primary {
+    background: linear-gradient(135deg, #9259CD, #B77BF3);
+    color: white;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(146, 89, 205, 0.3);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: #9259CD;
+    border: 2px solid #9259CD;
+}
+
+.btn-secondary:hover {
+    background: #f3e8ff;
+    transform: translateY(-2px);
+}
+
+/* Coluna direita - Resultado */
+.output-area {
+    flex: 1;
+    min-width: 280px;
+}
+
+.result-container {
+    background: #f9f3ff;
+    border-radius: 32px;
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Estado vazio (sem texto) */
+.empty-state {
+    text-align: center;
+    padding: 2rem;
+}
+
+.empty-icon {
+    background: linear-gradient(135deg, #9259CD, #B77BF3);
+    width: 70px;
+    height: 70px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 1rem;
+}
+
+.empty-icon i {
+    font-size: 2rem;
+    color: white;
+}
+
+.empty-state strong {
+    font-size: 1rem;
+    color: #2d1b3e;
+    display: block;
+    margin-bottom: 0.5rem;
+}
+
+.empty-state p {
+    font-size: 0.8rem;
+    color: #5a3a7a;
+}
+
+/* Estado com resultado */
+.result-content {
+    width: 100%;
+    padding: 1.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.result-textarea {
+    width: 100%;
+    height: 250px;
+    padding: 1rem;
+    font-size: 0.95rem;
+    font-family: 'Inter', monospace;
+    border: none;
+    background: transparent;
+    resize: none;
+    text-align: left;
+    color: #2d1b3e;
+    line-height: 1.5;
+}
+
+.result-textarea:focus {
     outline: none;
+}
+
+.btn-copy {
+    background: transparent;
+    border: 2px solid #9259CD;
+    color: #9259CD;
+    padding: 0.8rem;
+    border-radius: 40px;
+    font-size: 0.9rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    font-family: inherit;
+}
+
+.btn-copy:hover {
+    background: #ede4ff;
+    transform: translateY(-2px);
+}
+
+/* Utilitários */
+.hidden {
+    display: none;
+}
+
+/* Responsivo */
+@media (max-width: 768px) {
+    .card {
+        padding: 1.5rem;
+    }
+    
+    h1 {
+        font-size: 1.4rem;
+    }
+    
+    .icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .icon-wrapper i {
+        font-size: 1.8rem;
+    }
+    
+    .button-group {
+        flex-direction: column;
+    }
+    
+    .btn-primary, .btn-secondary {
+        width: 100%;
+    }
+    
+    .input-texto {
+        height: 200px;
+    }
+}
+
+@media (max-width: 480px) {
+    .card {
+        padding: 1rem;
+    }
+    
+    .empty-icon {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .empty-icon i {
+        font-size: 1.5rem;
+    }
+    
+    .empty-state strong {
+        font-size: 0.9rem;
+    }
+    
+    .empty-state p {
+        font-size: 0.7rem;
+    }
 }
