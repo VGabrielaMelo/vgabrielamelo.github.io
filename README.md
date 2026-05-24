@@ -39,6 +39,10 @@ O desafio proposto pelo evento era:
 Acesse o currículo online:  
 👉 [https://vgabrielamelo.github.io/ProjetoCurriculo-EBAC](https://vgabrielamelo.github.io/ProjetoCurriculo-EBAC)
 
+#### Demonstração
+
+![Demonstração do Currículo Web](./assets/demonstracoes/Curriculo.gif)
+
 #### 💻 Feito com
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
@@ -71,6 +75,8 @@ O desafio proposto pelo evento era:
 Acesse o Habits Control online:  
 👉 [https://vgabrielamelo.github.io/ProjetoHabitsControl-Rocket](https://vgabrielamelo.github.io/ProjetoHabitsControl-Rocket)
 
+![Demonstração Habits Control](./assets/demonstracoes/Habits.gif)
+
 #### 💻 Feito com
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
@@ -102,6 +108,10 @@ O projeto original era uma calculadora simples de horas trabalhadas. Foi complet
 
 Acesse a calculadora online:  
 👉 [https://vgabrielamelo.github.io/ProjetoCalculadoraJava-EBAC](https://vgabrielamelo.github.io/ProjetoCalculadoraJava-EBAC)
+
+#### Demonstração
+
+![Demonstração Calculadora](./assets/demonstracoes/Calculadora.gif)
 
 #### 💻 Feito com
 
@@ -136,11 +146,15 @@ O projeto original era uma contagem regressiva simples para uma única data (Hal
 Acesse a contagem regressiva online:  
 👉 [https://vgabrielamelo.github.io/ProjetoContagemRegressiva](https://vgabrielamelo.github.io/ProjetoContagemRegressiva)
 
+![Demonstração Contagem Regressiva](./assets/demonstracoes/Contagem.gif)
+
 #### 💻 Feito com
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
+
+---
 
 ### Jogo da Forca - ONE
 
@@ -172,12 +186,16 @@ O desafio proposto pelo curso era desenvolver um jogo da forca que:
 Acesse o Jogo da Forca online:  
 👉 [https://vgabrielamelo.github.io/ProjetoJogodaForca-ONE](https://vgabrielamelo.github.io/ProjetoJogodaForca-ONE)
 
+![Demonstração do Jogo da Forca](./assets/demonstracoes/Forca.gif)
+
 #### 💻 Feito com
 
 [![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/HTML)
 [![CSS3](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white)](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
 [![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black)](https://developer.mozilla.org/pt-BR/docs/Web/JavaScript)
 [![Figma](https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white)](https://www.figma.com/)
+
+---
 
 ### Codificador de Texto - ONE
 
@@ -205,6 +223,8 @@ O desafio proposto pelo curso era desenvolver uma aplicação web que:
 
 Acesse o Codificador de Texto online:  
 👉 [https://vgabrielamelo.github.io/ProjetoCodificador-ONE](https://vgabrielamelo.github.io/ProjetoCodificador-ONE)
+
+![Demonstração Decodificador](./assets/demonstracoes/Decodificador.gif)
 
 #### 💻 Feito com
 
